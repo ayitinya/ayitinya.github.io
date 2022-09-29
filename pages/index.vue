@@ -87,7 +87,7 @@ const scrollTo = (element: HTMLElement) => {
             </nav>
         </div>
 
-        <div class="h-screen flex flex-col justify-center items-center" ref="hero">
+        <div class="min-h-screen flex flex-col justify-center items-center" ref="hero">
             <h1 class="lg:text-5xl md:text-4xl text-xl font-bold">Hello, I am Rudy Ayitinya, </h1>
             <span class="font-light lg:text-4xl md:text-3xl" ref="typewritterField"></span>
             <span  @click="scrollTo(about)">More</span>
@@ -111,7 +111,7 @@ const scrollTo = (element: HTMLElement) => {
                         praesentium laborum animi ratione reprehenderit quae dolores voluptas repellendus beatae quos
                         facere? Commodi, dignissimos accusantium.
                     </div>
-                    <div class="basis-full lg:pt-0 pt-5 flex justify-center lg:block">
+                    <div class="basis-full lg:pt-0 pt-5 flex justify-center">
                         <picture id="profile">
                             <img src="/images/my_image.jpg" alt="image of me" class="lg:max-h-[250px] max-h-[200px]">
                         </picture>
