@@ -7,6 +7,8 @@
       <Meta name="viewport" content="width=device-width, initial-scale=1" />
       <Meta name="theme-color" content="#ffffff" />
       <Meta name="description" content="My portfolio website" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-LTMV89EKNM" async></Script>
+      <Script src="/assets/js/gtag.js"></Script>
     </Head>
 
     <NuxtPage />
