@@ -7,6 +7,7 @@
       <Meta name="viewport" content="width=device-width, initial-scale=1" />
       <Meta name="theme-color" content="#ffffff" />
       <Meta name="description" content="My portfolio website" />
+      <Meta name="google-site-verification" content="nPvXYhF2XQvp-f7lxRKmf5lqdJx1xViOwbYkhVbmFjg" />
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-LTMV89EKNM" async></Script>
       <Script src="/js/gtag.js"></Script>
     </Head>
