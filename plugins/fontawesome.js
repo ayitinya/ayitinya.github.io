@@ -2,7 +2,7 @@ import { library, config } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { fab, faGithub, faTwitter, faLinkedin, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { fab, faGithub, faTwitter, faLinkedin, faLinkedinIn, faStackOverflow } from '@fortawesome/free-brands-svg-icons'
 // import envelop icon 
 
 // This is important, we are going to let Nuxt worry about the CSS

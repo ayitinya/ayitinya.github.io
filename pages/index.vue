@@ -7,6 +7,7 @@ const work = ref<HTMLElement | null>(null)
 const contact = ref<HTMLElement | null>(null)
 const hero = ref<HTMLElement | null>(null)
 const navbar = ref<HTMLElement | null>(null)
+const socialLinks = ref<HTMLElement | null>(null)
 
 
 
@@ -22,8 +23,9 @@ onMounted(() => {
         threshold: 0.6
     }
 
-    const observer = new IntersectionObserver((entries) => {
+    const navObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            console.log(entry)
             if (entry.isIntersecting) {
                 navbar.value?.classList.remove('bg-gray-900')
                 navbar.value?.classList.remove('opacity-95')
@@ -41,7 +43,25 @@ onMounted(() => {
     }, observerOptions)
 
 
-    observer.observe(hero.value)
+    navObserver.observe(hero.value)
+
+    const contactObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                socialLinks.value?.classList.remove('opacity-100')
+                socialLinks.value?.classList.remove('pointer-events-auto')
+                socialLinks.value?.classList.add('opacity-0')
+                socialLinks.value?.classList.add('pointer-events-none')
+            } else {
+                socialLinks.value?.classList.remove('opacity-0')
+                socialLinks.value?.classList.remove('pointer-events-none')
+                socialLinks.value?.classList.add('opacity-100')
+                socialLinks.value?.classList.add('pointer-events-auto')
+            }
+        })
+    }, observerOptions)
+
+    contactObserver.observe(contact.value)
 })
 
 
@@ -68,16 +88,16 @@ const scrollTo = (element: HTMLElement) => {
         </div>
 
         <div class="h-screen flex flex-col justify-center items-center" ref="hero">
-            <h1 class="text-5xl font-bold">Hello, I am Rudy Ayitinya, <span class="font-light"
-                    ref="typewritterField"></span></h1>
-            <span class="text-2xl" @click="scrollTo(about)">More</span>
+            <h1 class="lg:text-5xl md:text-4xl text-xl font-bold">Hello, I am Rudy Ayitinya, </h1>
+            <span class="font-light lg:text-4xl md:text-3xl" ref="typewritterField"></span>
+            <span  @click="scrollTo(about)">More</span>
         </div>
 
 
-        <div class="flex justify-center flex-col items-center px-20">
-            <section id="about-me" class="h-screen flex flex-col justify-center " ref="about">
+        <div class="flex justify-center flex-col items-center md:px-20 px-5">
+            <section id="about-me" class="min-h-screen flex flex-col justify-center " ref="about">
                 <h2 class="text-3xl">About Me</h2>
-                <div class="flex flex-row">
+                <div class="flex lg:flex-row flex-col">
                     <div>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur ea, nihil corrupti debitis
                         asperiores, aliquam aut alias placeat repudiandae quibusdam id numquam. Deleniti voluptatibus,
@@ -91,20 +111,22 @@ const scrollTo = (element: HTMLElement) => {
                         praesentium laborum animi ratione reprehenderit quae dolores voluptas repellendus beatae quos
                         facere? Commodi, dignissimos accusantium.
                     </div>
-                    <div class="basis-full">
-                        <img src="/images/my_image.jpg" alt="image of me" class="h-max-[250px]">
+                    <div class="basis-full lg:pt-0 pt-5 flex justify-center lg:block">
+                        <picture id="profile">
+                            <img src="/images/my_image.jpg" alt="image of me" class="lg:max-h-[250px] max-h-[200px]">
+                        </picture>
                     </div>
                 </div>
             </section>
 
-            <section id="work" class="h-screen flex flex-col justify-center " ref="work">
+            <section id="work" class="min-h-screen flex flex-col justify-center " ref="work">
                 <h2 class="text-3xl">My Work</h2>
                 <div>
                     <p>Section under development. Please do check later</p>
                 </div>
             </section>
 
-            <section id="work" class="h-screen flex flex-col justify-center " ref="contact">
+            <section class="min-h-screen flex flex-col justify-center " ref="contact">
                 <h2 class="text-3xl text-center">Want to get in touch?</h2>
                 <div>
                     <div>
@@ -124,6 +146,10 @@ const scrollTo = (element: HTMLElement) => {
                                 class="pr-3">
                                 <font-awesome-icon icon="fa-brands fa-twitter" class="fa-xl" />
                             </a>
+                            <a href="https://stackoverflow.com/users/13605694/ayitinya" target="_blank"
+                                rel="noopener noreferrer" class="pr-3">
+                                <font-awesome-icon icon="fa-brands fa-stack-overflow" class="fa-xl" />
+                            </a>
                             <a href="mailto:aytinya@outlook.com" class="pr-3">
                                 <font-awesome-icon icon="fa-regular fa-envelope" class="fa-xl" />
                             </a>
@@ -133,6 +159,10 @@ const scrollTo = (element: HTMLElement) => {
                                 <a href="https://www.linkedin.com/in/ayitinya/" target="_blank"
                                     rel="noopener noreferrer" class="pb-3">LinkedIn</a>
                                 <a href="https://www.twitter.com/ayitinya" class="pb-3">Twitter</a>
+                                <a href="https://stackoverflow.com/users/13605694/ayitinya" target="_blank"
+                                    rel="noopener noreferrer" class="pr-3">
+                                    Stackoverflow
+                                </a>
                                 <a href="mailto:aytinya@outlook.com" class="pr-3">Mail</a>
                             </template>
                         </ClientOnly>
@@ -142,7 +172,7 @@ const scrollTo = (element: HTMLElement) => {
         </div>
 
 
-        <div class="fixed bottom-0 left-0 flex flex-col pl-5 pb-5 flex items-center">
+        <div class="fixed bottom-0 left-0 md:flex flex-col pl-5 pb-5 flex items-center hidden" ref="socialLinks">
             <ClientOnly>
                 <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer" class="pb-3">
                     <font-awesome-icon icon="fa-brands fa-github" class="fa-xl" />
@@ -153,6 +183,10 @@ const scrollTo = (element: HTMLElement) => {
                 <a href="https://www.twitter.com/ayitinya" target="_blank" rel="noopener noreferrer" class="pb-3">
                     <font-awesome-icon icon="fa-brands fa-twitter" class="fa-xl" />
                 </a>
+                <a href="https://stackoverflow.com/users/13605694/ayitinya" target="_blank" rel="noopener noreferrer"
+                    class="pb-3">
+                    <font-awesome-icon icon="fa-brands fa-stack-overflow" class="fa-xl" />
+                </a>
                 <a href="mailto:aytinya@outlook.com" class="pb-3">
                     <font-awesome-icon icon="fa-regular fa-envelope" class="fa-xl" />
                 </a>
@@ -162,6 +196,10 @@ const scrollTo = (element: HTMLElement) => {
                     <a href="https://www.linkedin.com/in/ayitinya/" target="_blank" rel="noopener noreferrer"
                         class="pb-3">LinkedIn</a>
                     <a href="https://www.twitter.com/ayitinya" class="pb-3">Twitter</a>
+                    <a href="https://stackoverflow.com/users/13605694/ayitinya" target="_blank"
+                        rel="noopener noreferrer" class="pr-3">
+                        Stackoverflow
+                    </a>
                     <a href="mailto:aytinya@outlook.com" class="pb-3">Mail</a>
                 </template>
             </ClientOnly>
@@ -170,3 +208,5 @@ const scrollTo = (element: HTMLElement) => {
     </div>
 </template>
 
+<style scoped>
+</style>
