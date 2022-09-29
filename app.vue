@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen flex flex-col">
     <NuxtPage />
   </div>
 </template>
@@ -11,7 +11,7 @@
     font-family: 'Inconsolata', 'Courier Prime', monospace;
     background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
   }
 </style>
