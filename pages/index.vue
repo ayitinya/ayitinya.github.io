@@ -25,19 +25,18 @@ onMounted(() => {
 
     const navObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            console.log(entry)
             if (entry.isIntersecting) {
-                navbar.value?.classList.remove('bg-gray-900')
-                navbar.value?.classList.remove('opacity-95')
-                navbar.value?.classList.remove('text-white')
-                navbar.value?.classList.remove('drop-shadow-sm')
+                navbar.value?.classList.remove('bg-[#e0e0e0]')
+                navbar.value?.classList.remove('opacity-96')
+                // navbar.value?.classList.remove('text-white')
+                navbar.value?.classList.remove('drop-shadow-lg')
                 navbar.value?.classList.add('bg-transparent')
             } else {
                 navbar.value?.classList.remove('bg-transparent')
-                navbar.value?.classList.add('bg-gray-900')
-                navbar.value?.classList.add('opacity-95')
-                navbar.value?.classList.add('text-white')
-                navbar.value?.classList.add('drop-shadow-sm')
+                navbar.value?.classList.add('bg-[#e0e0e0]')
+                navbar.value?.classList.add('opacity-96')
+                // navbar.value?.classList.add('text-white')
+                navbar.value?.classList.add('drop-shadow-lg')
             }
         })
     }, observerOptions)
@@ -74,7 +73,7 @@ const scrollTo = (element: HTMLElement) => {
 <template>
     <div>
 
-        <div id="navbar" class="sticky top-0 py-2" ref="navbar">
+        <div id="navbar" class="sticky top-0 py-4 z-50" ref="navbar">
             <nav class="flex flex-row justify-between">
                 <span></span>
                 <ul class="flex flex-row items-end">
@@ -95,7 +94,7 @@ const scrollTo = (element: HTMLElement) => {
 
 
         <div class="flex justify-center flex-col items-center md:px-20 px-5">
-            <section id="about-me" class="min-h-screen flex flex-col justify-center " ref="about">
+            <section id="about-me" class="min-h-screen flex flex-col justify-center" ref="about">
                 <h2 class="text-3xl">About Me</h2>
                 <div class="flex lg:flex-row flex-col">
                     <div>
@@ -112,7 +111,7 @@ const scrollTo = (element: HTMLElement) => {
                         facere? Commodi, dignissimos accusantium.
                     </div>
                     <div class="basis-full lg:pt-0 pt-5 flex justify-center">
-                        <picture id="profile">
+                        <picture id="profile" class="h-fit relative">
                             <img src="/images/my_image.jpg" alt="image of me" class="lg:max-h-[250px] max-h-[200px]">
                         </picture>
                     </div>
@@ -141,6 +140,7 @@ const scrollTo = (element: HTMLElement) => {
                             <a href="https://www.linkedin.com/in/ayitinya/" target="_blank" rel="noopener noreferrer"
                                 class="pr-3">
                                 <font-awesome-icon icon="fa-brands fa-linkedin-in" class="fa-xl" />
+
                             </a>
                             <a href="https://www.twitter.com/ayitinya" target="_blank" rel="noopener noreferrer"
                                 class="pr-3">
@@ -209,4 +209,31 @@ const scrollTo = (element: HTMLElement) => {
 </template>
 
 <style scoped>
+    picture > img {
+        filter: brightness(0.5)  grayscale(.7)  ;
+        transition: filter 0.3s ease-in-out;
+    }
+
+    picture:hover > img {
+        filter: brightness(1) grayscale(0);
+    }
+
+    picture::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 10%;
+        left: 10%;
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+        z-index: -99;
+        transition: all 0.5s ease-in-out;
+    }
+
+    picture:hover::after {
+        top: 15%;
+        left: 15%;
+    }
+
 </style>

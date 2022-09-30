@@ -21,9 +21,17 @@
 
 body {
   font-family: 'Inconsolata', 'Courier Prime', monospace;
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
   background-repeat: no-repeat;
   min-height: 100vh;
   margin: 0;
+
+  background: #e0e0e0;
+  /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to bottom, #0C0A3E, #35FF69); */
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to bottom, #0C0A3E, #35FF69); */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 </style>
