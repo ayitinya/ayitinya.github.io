@@ -82,6 +82,9 @@ const scrollTo = (element: HTMLElement) => {
                 <span></span>
                 <ul class="flex-row items-end hidden md:flex">
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
+                        @click="scrollTo(hero)">
+                        Home</li>
+                    <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
                         @click="scrollTo(about)">
                         About Me</li>
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
@@ -96,18 +99,21 @@ const scrollTo = (element: HTMLElement) => {
                             href="/images/my_image.jpg" download="rudy_ayitinya_resume">Resume</a>
                     </li>
                 </ul>
-                <ClientOnly>
+                <LazyClientOnly>
                     <span class="md:hidden">
                         <font-awesome-icon icon="fa-solid fa-bars" @click="navClosed = false" />
                     </span>
-                </ClientOnly>
+                </LazyClientOnly>
 
                 <div class="bg-[#e0e0e0] w-full h-screen fixed top-0 left-0 z-50 transition-all ease-in-out duration-500"
                     :class="{'hidden': navClosed}">
-                    <div class="flex justify-end py-5 pr-6">
-                        <font-awesome-icon icon="fa-solid fa-xmark" @click="navClosed = true" />
-                    </div>
+                    <LazyClientOnly>
+                        <div class="flex justify-end py-5 pr-6">
+                            <font-awesome-icon icon="fa-solid fa-xmark" @click="navClosed = true" />
+                        </div>
+                    </LazyClientOnly>
                     <ul class="flex flex-col justify-center items-center h-full">
+                        <li class="py-5" @click="scrollTo(hero)">Home</li>
                         <li class="py-5" @click="scrollTo(about)">About Me</li>
                         <li class="py-5" @click="scrollTo(work)">My Work</li>
                         <li class="py-5" @click="scrollTo(contact)">Contact Me</li>
@@ -178,25 +184,29 @@ const scrollTo = (element: HTMLElement) => {
                         I am currently open for opportunities. If you have any questions, feel free to reach out to me.
                     </div>
                     <div class="flex justify-center pt-5">
-                        <ClientOnly>
-                            <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer"
-                                class="px-3">
+                        <LazyClientOnly>
+                            <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer" class="px-3"
+                                title="github">
                                 <font-awesome-icon icon="fa-brands fa-github" class="fa-xl" />
                             </a>
                             <a href="https://www.linkedin.com/in/ayitinya/" target="_blank" rel="noopener noreferrer"
-                                class="px-3">
+                                class="px-3" title="linkedin">
                                 <font-awesome-icon icon="fa-brands fa-linkedin-in" class="fa-xl" />
 
                             </a>
                             <a href="https://www.twitter.com/ayitinya" target="_blank" rel="noopener noreferrer"
-                                class="px-3">
+                                class="px-3" title="twitter">
                                 <font-awesome-icon icon="fa-brands fa-twitter" class="fa-xl" />
                             </a>
                             <a href="https://stackoverflow.com/users/13605694/ayitinya" target="_blank"
-                                rel="noopener noreferrer" class="pr-3">
+                                rel="noopener noreferrer" class="px-3" title="stackoverflow">
                                 <font-awesome-icon icon="fa-brands fa-stack-overflow" class="fa-xl" />
                             </a>
-                            <a href="mailto:aytinya@outlook.com" class="px-3">
+                            <a href="https://www.youtube.com/channel/UCXl1hGdGXXKDidPqK1Xcm1A" target="_blank"
+                                rel="noopener noreferrer" class="px-3" title="youtube">
+                                <font-awesome-icon icon="fa-brands fa-youtube" class="fa-xl" />
+                            </a>
+                            <a href="mailto:aytinya@outlook.com" class="px-3" title="ayitinya@outlook.com">
                                 <font-awesome-icon icon="fa-regular fa-envelope" class="fa-xl" />
                             </a>
                             <template #fallback>
@@ -209,9 +219,11 @@ const scrollTo = (element: HTMLElement) => {
                                     rel="noopener noreferrer" class="pr-3">
                                     Stackoverflow
                                 </a>
+                                <a href="https://www.youtube.com/channel/UCXl1hGdGXXKDidPqK1Xcm1A" target="_blank"
+                                    rel="noopener noreferrer">Youtube</a>
                                 <a href="mailto:aytinya@outlook.com" class="pr-3">Mail</a>
                             </template>
-                        </ClientOnly>
+                        </LazyClientOnly>
                     </div>
                 </div>
             </section>
@@ -219,21 +231,28 @@ const scrollTo = (element: HTMLElement) => {
 
 
         <div class="fixed bottom-0 left-0 lg:flex flex-col pl-5 pb-5 flex items-center hidden" ref="socialLinks">
-            <ClientOnly>
-                <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer" class="pb-3">
+            <LazyClientOnly>
+                <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer" class="pb-3"
+                    title="github">
                     <font-awesome-icon icon="fa-brands fa-github" class="fa-xl" />
                 </a>
-                <a href="https://www.linkedin.com/in/ayitinya/" target="_blank" rel="noopener noreferrer" class="pb-3">
+                <a href="https://www.linkedin.com/in/ayitinya/" target="_blank" rel="noopener noreferrer" class="pb-3"
+                    title="linkedin">
                     <font-awesome-icon icon="fa-brands fa-linkedin-in" class="fa-xl" />
                 </a>
-                <a href="https://www.twitter.com/ayitinya" target="_blank" rel="noopener noreferrer" class="pb-3">
+                <a href="https://www.twitter.com/ayitinya" target="_blank" rel="noopener noreferrer" class="pb-3"
+                    title="twitter">
                     <font-awesome-icon icon="fa-brands fa-twitter" class="fa-xl" />
                 </a>
                 <a href="https://stackoverflow.com/users/13605694/ayitinya" target="_blank" rel="noopener noreferrer"
-                    class="pb-3">
+                    class="pb-3" title="stackoverflow">
                     <font-awesome-icon icon="fa-brands fa-stack-overflow" class="fa-xl" />
                 </a>
-                <a href="mailto:aytinya@outlook.com" class="pb-3">
+                <a href="https://www.youtube.com/channel/UCXl1hGdGXXKDidPqK1Xcm1A" target="_blank"
+                    rel="noopener noreferrer" class="pb-3" title="youtube">
+                    <font-awesome-icon icon="fa-brands fa-youtube" class="fa-xl" />
+                </a>
+                <a href="mailto:aytinya@outlook.com" class="pb-3" title="ayitinya@outlook.com">
                     <font-awesome-icon icon="fa-regular fa-envelope" class="fa-xl" />
                 </a>
                 <template #fallback>
@@ -246,9 +265,11 @@ const scrollTo = (element: HTMLElement) => {
                         rel="noopener noreferrer" class="pr-3">
                         Stackoverflow
                     </a>
+                    <a href="https://www.youtube.com/channel/UCXl1hGdGXXKDidPqK1Xcm1A" target="_blank"
+                        rel="noopener noreferrer">Youtube</a>
                     <a href="mailto:aytinya@outlook.com" class="pb-3">Mail</a>
                 </template>
-            </ClientOnly>
+            </LazyClientOnly>
             <div id="line" class="h-32 border-r border-black"></div>
         </div>
     </div>
