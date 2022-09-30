@@ -1,6 +1,6 @@
 
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="min-h-screen flex flex-col overflow-x-hidden">
 
     <Head>
       <Title>Rudy Ayitinya Sulley</Title>
@@ -23,7 +23,7 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
   margin: 0;
-
+  overflow-x: hidden;
   background: #e0e0e0;
 }
 </style>
