@@ -25,5 +25,6 @@ body {
   margin: 0;
   overflow-x: hidden;
   background: #e0e0e0;
+  font-size: 1.125rem;
 }
 </style>
