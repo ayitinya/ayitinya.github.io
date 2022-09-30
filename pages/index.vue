@@ -9,14 +9,15 @@ const hero = ref<HTMLElement | null>(null)
 const navbar = ref<HTMLElement | null>(null)
 const socialLinks = ref<HTMLElement | null>(null)
 
-
+const navClosed = ref(true)
 
 onMounted(() => {
     const typewriter = new Typewriter(typewritterField.value, {
         loop: true,
         delay: 100,
         autoStart: true,
-        strings: ['a web developer', 'an engineer', 'a student', 'a gamer', 'a reader', 'a writer', 'a thinker', 'a dreamer', 'a creator', 'a problem solver', 'a learner', 'a teacher', 'a friend', 'a brother', 'a son', 'a husband', 'a father', 'a human'],
+        deleteSpeed: 25,
+        strings: ['a web developer', 'an engineer', 'a student', 'a gamer', 'a creator', 'a learner', 'a teacher', 'a friend', 'a human'],
     });
 
     const observerOptions = {
@@ -73,23 +74,50 @@ const scrollTo = (element: HTMLElement) => {
 <template>
     <div>
 
-        <div id="navbar" class="sticky top-0 py-4 z-50" ref="navbar">
-            <nav class="flex flex-row justify-between">
+        <div id="navbar" class="sticky top-0 py-4 z-50 transition-all ease-in-out duration-500" ref="navbar">
+            <nav class="flex-row justify-between flex pr-5">
                 <span></span>
-                <ul class="flex flex-row items-end">
-                    <li class="pr-2" @click="scrollTo(about)">About Me</li>
-                    <li class="pr-2" @click="scrollTo(work)">My Work</li>
-                    <li class="pr-2" @click="scrollTo(contact)">Contact Me</li>
-                    <li class="pr-2"><a class="outline-black border border-solid border-black px-1"
-                            href="/images/my_image.jpg" download="rudy_ayitinya_resume">Resume</a></li>
+                <ul class="flex-row items-end hidden md:flex">
+                    <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
+                        @click="scrollTo(about)">
+                        About Me</li>
+                    <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
+                        @click="scrollTo(work)">My
+                        Work</li>
+                    <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
+                        @click="scrollTo(contact)">
+                        Contact Me</li>
+                    <li
+                        class="transition-all ease-in-out duration-300 hover:scale-110 transition-all ease-in-out duration-500">
+                        <a class="border border-black px-5 py-2 rounded-md hover:border-[#C7C7C7]"
+                            href="/images/my_image.jpg" download="rudy_ayitinya_resume">Resume</a>
+                    </li>
                 </ul>
+                <ClientOnly>
+                    <span class="md:hidden">
+                        <font-awesome-icon icon="fa-solid fa-bars" @click="navClosed = false"/>
+                    </span>
+                </ClientOnly>
+
+                <div class="bg-[#e0e0e0] w-full h-screen fixed top-0 left-0 z-50 transition-all ease-in-out duration-500" :class="{'hidden': navClosed}">
+                    <div class="flex justify-end py-5 pr-6">
+                        <font-awesome-icon icon="fa-solid fa-xmark" @click="navClosed = true"/>
+                    </div>
+                    <ul class="flex flex-col justify-center items-center h-full">
+                        <li class="py-5">About Me</li>
+                        <li class="py-5">My Work</li>
+                        <li class="py-5">Contact Me</li>
+                        <li class="py-5">Resume</li>
+                    </ul>
+                </div>
             </nav>
         </div>
 
         <div class="min-h-screen flex flex-col justify-center items-center" ref="hero">
             <h1 class="lg:text-5xl md:text-4xl text-xl font-bold">Hello, I am Rudy Ayitinya, </h1>
             <span class="font-light lg:text-4xl md:text-3xl" ref="typewritterField"></span>
-            <span  @click="scrollTo(about)">More</span>
+            <span @click="scrollTo(about)"
+                class="hover:scale-110 transition-all ease-in-out duration-500   cursor-pointer">More</span>
         </div>
 
 
@@ -98,17 +126,29 @@ const scrollTo = (element: HTMLElement) => {
                 <h2 class="text-3xl">About Me</h2>
                 <div class="flex lg:flex-row flex-col">
                     <div>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur ea, nihil corrupti debitis
-                        asperiores, aliquam aut alias placeat repudiandae quibusdam id numquam. Deleniti voluptatibus,
-                        iure, tenetur quisquam, recusandae deserunt harum voluptatem repellat mollitia corrupti veniam
-                        praesentium laborum animi ratione reprehenderit quae dolores voluptas repellendus beatae quos
-                        facere? Commodi, dignissimos accusantium.
+                        I am an Electrical/Electronics Engineering undergraduate student at the Kwame Nkrumah University
+                        of Science and Technology, Kumasi. I am a self-taught full-stack web developer and I am
+                        passionate about
+                        building web applications. I am also a gamer and a tech enthusiast. I am currently looking for
+                        an internship or a job as a web developer.
                         <br> <br>
-                        adipisicing elit. Tenetur ea, nihil corrupti debitis
-                        asperiores, aliquam aut alias placeat repudiandae quibusdam id numquam. Deleniti voluptatibus,
-                        iure, tenetur quisquam, recusandae deserunt harum voluptatem repellat mollitia corrupti veniam
-                        praesentium laborum animi ratione reprehenderit quae dolores voluptas repellendus beatae quos
-                        facere? Commodi, dignissimos accusantium.
+                        I am proficient in the following technologies:
+                        <ul class="list-none columns-2">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>NodeJS</li>
+                            <li>VueJS</li>
+                            <li>NuxtJs</li>
+                            <li>Bootstrap</li>
+                            <li>TailwindCSS</li>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Linux</li>
+                        </ul>
                     </div>
                     <div class="basis-full lg:pt-0 pt-5 flex justify-center">
                         <picture id="profile" class="h-fit relative">
@@ -209,31 +249,30 @@ const scrollTo = (element: HTMLElement) => {
 </template>
 
 <style scoped>
-    picture > img {
-        filter: brightness(0.5)  grayscale(.7)  ;
-        transition: filter 0.3s ease-in-out;
-    }
+picture>img {
+    filter: brightness(0.5) grayscale(.7);
+    transition: filter 0.3s ease-in-out;
+}
 
-    picture:hover > img {
-        filter: brightness(1) grayscale(0);
-    }
+picture:hover>img {
+    filter: brightness(1) grayscale(0);
+}
 
-    picture::after {
-        content: "";
-        position: absolute;
-        display: block;
-        top: 10%;
-        left: 10%;
-        width: 100%;
-        height: 100%;
-        border: 1px solid black;
-        z-index: -99;
-        transition: all 0.5s ease-in-out;
-    }
+picture::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 10%;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    z-index: -99;
+    transition: all 0.5s ease-in-out;
+}
 
-    picture:hover::after {
-        top: 15%;
-        left: 15%;
-    }
-
+picture:hover::after {
+    top: 15%;
+    left: 15%;
+}
 </style>
