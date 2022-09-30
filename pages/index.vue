@@ -96,7 +96,7 @@ const scrollTo = (element: HTMLElement) => {
                     <li
                         class="transition-all ease-in-out duration-300 hover:scale-110 transition-all ease-in-out duration-500">
                         <a class="border border-black px-5 py-2 rounded-md hover:border-[#C7C7C7]"
-                            href="/images/my_image.jpg" download="rudy_ayitinya_resume">Resume</a>
+                            href="/resume/resume.pdf" download="rudy_ayitinya_resume">Resume</a>
                     </li>
                 </ul>
                 <LazyClientOnly>
@@ -117,7 +117,8 @@ const scrollTo = (element: HTMLElement) => {
                         <li class="py-5" @click="scrollTo(about)">About Me</li>
                         <li class="py-5" @click="scrollTo(work)">My Work</li>
                         <li class="py-5" @click="scrollTo(contact)">Contact Me</li>
-                        <li class="py-5">Resume</li>
+                        <li class="py-5"><a class="border border-black px-5 py-2 rounded-md" href="/resume/resume.pdf"
+                                download="rudy_ayitinya_resume">Resume</a></li>
                     </ul>
                 </div>
             </nav>
@@ -138,7 +139,8 @@ const scrollTo = (element: HTMLElement) => {
                 <h2 class="text-3xl">About Me</h2>
                 <div class="flex lg:flex-row flex-col">
                     <div class="md:pr-3">
-                        I am an Electrical/Electronics Engineering undergraduate student at the Kwame Nkrumah University
+                        I am, Rudy Ayitinya Sulley, an Electrical/Electronics Engineering undergraduate student at the
+                        Kwame Nkrumah University
                         of Science and Technology, Kumasi. I am a self-taught full-stack web developer and I am
                         passionate about
                         building web applications. I am also a gamer and a tech enthusiast. I am currently looking for
