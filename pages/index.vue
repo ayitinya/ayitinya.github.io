@@ -139,7 +139,7 @@ const scrollTo = (element: HTMLElement) => {
                         an internship or a job as a web developer.
                         <br> <br>
                         I am proficient in the following technologies:
-                        <ul class="list-none columns-2">
+                        <ul class="list-inside list-disc columns-2">
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>JavaScript</li>
