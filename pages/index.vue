@@ -62,6 +62,21 @@ onMounted(() => {
     }, observerOptions)
 
     contactObserver.observe(contact.value)
+
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('on-screen')
+            }
+        })
+    }, {
+        threshold: 0.1
+    })
+
+    const sections = [about.value, work.value, contact.value, hero.value]
+    sections.forEach(section => {
+        scrollObserver.observe(section)
+    })
 })
 
 
@@ -124,7 +139,7 @@ const scrollTo = (element: HTMLElement) => {
             </nav>
         </div>
 
-        <div class="min-h-screen flex-col justify-center items-center flex" ref="hero">
+        <div class="min-h-screen flex-col justify-center items-center flex off-screen" ref="hero">
             <span class="md:hidden">Hello, I am</span>
             <h1 class="text-4xl text-center font-bold md:hidden">Rudy Ayitinya </h1>
             <h1 class="lg:text-5xl md:text-4xl text-xl font-bold hidden md:block">Hello, I am Rudy Ayitinya, </h1>
@@ -135,7 +150,8 @@ const scrollTo = (element: HTMLElement) => {
 
 
         <div class="flex justify-center flex-col items-center md:px-20 px-5">
-            <section id="about-me" class="min-h-screen flex flex-col justify-center max-w-[900px]" ref="about">
+            <section id="about-me" class="min-h-screen flex flex-col justify-center max-w-[900px] off-screen"
+                ref="about">
                 <h2 class="text-3xl">About Me</h2>
                 <div class="flex lg:flex-row flex-col">
                     <div class="md:pr-3">
@@ -172,14 +188,14 @@ const scrollTo = (element: HTMLElement) => {
                 </div>
             </section>
 
-            <section id="work" class="min-h-screen flex flex-col justify-center " ref="work">
+            <section id="work" class="min-h-screen flex flex-col justify-center off-screen" ref="work">
                 <h2 class="text-3xl">My Work</h2>
                 <div>
                     <p>Section under development. Please do check later</p>
                 </div>
             </section>
 
-            <section class="min-h-screen flex flex-col justify-center " ref="contact">
+            <section class="min-h-screen flex flex-col justify-center off-screen" ref="contact">
                 <h2 class="text-3xl text-center">Want to get in touch?</h2>
                 <div>
                     <div>
@@ -232,7 +248,7 @@ const scrollTo = (element: HTMLElement) => {
         </div>
 
 
-        <div class="fixed bottom-0 left-0 lg:flex flex-col pl-5 pb-5 flex items-center hidden" ref="socialLinks">
+        <div class="fixed bottom-0 left-0 lg:flex flex-col pl-5 pb-5 flex items-center hidden transition-all ease-in-out duration-500" ref="socialLinks">
             <LazyClientOnly>
                 <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer" class="pb-3"
                     title="github">
@@ -303,5 +319,17 @@ picture::after {
 picture:hover::after {
     top: 15%;
     left: 15%;
+}
+
+.off-screen {
+    transform: translateX(-70%);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    transition-delay: 200ms;
+}
+
+.on-screen {
+    transform: translateX(0);
+    opacity: 1;
 }
 </style>
