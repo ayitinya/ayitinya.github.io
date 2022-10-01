@@ -86,6 +86,22 @@ const scrollTo = (element: HTMLElement) => {
         navClosed.value = true
     }
 }
+const formNotSent = ref(true)
+const submitForm = async (event: Event) => {
+    const formData = new FormData(event.target as HTMLFormElement)
+    fetch("https://formspree.io/f/mjvzrgpj", {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        console.log(response)
+        formNotSent.value = false
+    }).catch(error => {
+        console.log(error)
+    })
+}
 
 </script>
 
@@ -199,6 +215,27 @@ const scrollTo = (element: HTMLElement) => {
                     <div>
                         I am currently open for opportunities. If you have any questions, feel free to reach out to me.
                     </div>
+                    <form action="https://formspree.io/f/mjvzrgpj" method="post" @submit.prevent="submitForm">
+                        <div class="flex flex-col">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" class="rounded-md px-2 py-1" required>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" class=" rounded-md px-2 py-1" required>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="3" class=" rounded-md " required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="border border-black px-3 py-1 my-3 rounded-md hover:shadow-lg">Send</button>
+                    </form>
+                    <div>
+                        <p :class="{'hidden': formNotSent}">
+                            Your message has been sent successfully. I will get back to you as soon as possible.
+                        </p>
+                    </div>
                     <div class="flex justify-center pt-5">
                         <LazyClientOnly>
                             <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer"
@@ -253,7 +290,10 @@ const scrollTo = (element: HTMLElement) => {
         <footer>
             <ClientOnly>
                 <p class="text-center">
-                    Made with <font-awesome-icon icon="fa-solid fa-heart" /> and open-sourced on <a href="https://github.com/ayitinya/ayitinya.github.io" target="_blank" rel="noopener noreferrer" class="text-cyan-500">Github</a> by Ayitinya
+                    Made with
+                    <font-awesome-icon icon="fa-solid fa-heart" /> and open-sourced on <a
+                        href="https://github.com/ayitinya/ayitinya.github.io" target="_blank" rel="noopener noreferrer"
+                        class="text-cyan-500">Github</a> by Ayitinya
                 </p>
             </ClientOnly>
         </footer>
