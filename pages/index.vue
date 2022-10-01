@@ -95,7 +95,7 @@ const scrollTo = (element: HTMLElement) => {
         <div id="navbar" class="sticky top-0  z-50 transition-all ease-in-out duration-500" ref="navbar">
             <nav class="flex-row justify-between flex px-5">
                 <span @click="scrollTo(hero)">
-                    <img src="images/logo.png" class="h-12" alt="">
+                    <img src="/images/logo.png" class="h-12" alt="">
                 </span>
                 <ul class="flex-row items-center hidden md:flex">
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
