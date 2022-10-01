@@ -92,13 +92,12 @@ const scrollTo = (element: HTMLElement) => {
 <template>
     <div>
 
-        <div id="navbar" class="sticky top-0 py-4 z-50 transition-all ease-in-out duration-500" ref="navbar">
-            <nav class="flex-row justify-between flex pr-5">
-                <span></span>
-                <ul class="flex-row items-end hidden md:flex">
-                    <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
-                        @click="scrollTo(hero)">
-                        Home</li>
+        <div id="navbar" class="sticky top-0  z-50 transition-all ease-in-out duration-500" ref="navbar">
+            <nav class="flex-row justify-between flex px-5">
+                <span @click="scrollTo(hero)">
+                    <img src="images/logo.png" class="h-12" alt="">
+                </span>
+                <ul class="flex-row items-center hidden md:flex">
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
                         @click="scrollTo(about)">
                         About Me</li>
@@ -115,7 +114,7 @@ const scrollTo = (element: HTMLElement) => {
                     </li>
                 </ul>
                 <LazyClientOnly>
-                    <span class="md:hidden">
+                    <span class="md:hidden flex items-center">
                         <font-awesome-icon icon="fa-solid fa-bars" @click="navClosed = false" />
                     </span>
                 </LazyClientOnly>
@@ -123,12 +122,11 @@ const scrollTo = (element: HTMLElement) => {
                 <div class="bg-[#e0e0e0] w-full h-screen fixed top-0 left-0 z-50 transition-all ease-in-out duration-500"
                     :class="{'hidden': navClosed}">
                     <LazyClientOnly>
-                        <div class="flex justify-end py-5 pr-6">
+                        <span class="flex justify-end py-5 pr-6">
                             <font-awesome-icon icon="fa-solid fa-xmark" @click="navClosed = true" />
-                        </div>
+                        </span>
                     </LazyClientOnly>
                     <ul class="flex flex-col justify-center items-center h-full">
-                        <li class="py-5" @click="scrollTo(hero)">Home</li>
                         <li class="py-5" @click="scrollTo(about)">About Me</li>
                         <li class="py-5" @click="scrollTo(work)">My Work</li>
                         <li class="py-5" @click="scrollTo(contact)">Contact Me</li>
@@ -144,8 +142,8 @@ const scrollTo = (element: HTMLElement) => {
             <h1 class="text-4xl text-center font-bold md:hidden">Rudy Ayitinya </h1>
             <h1 class="lg:text-5xl md:text-4xl text-xl font-bold hidden md:block">Hello, I am Rudy Ayitinya, </h1>
             <span class="font-light lg:text-4xl text-3xl" ref="typewritterField"></span>
-            <span @click="scrollTo(about)"
-                class="hover:scale-110 transition-all ease-in-out duration-500   cursor-pointer">More</span>
+            <button type="button" @click="scrollTo(about)"
+                class="hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer border border-black px-3 rounded hover:shadow-lg my-3">More</button>
         </div>
 
 
@@ -203,28 +201,28 @@ const scrollTo = (element: HTMLElement) => {
                     </div>
                     <div class="flex justify-center pt-5">
                         <LazyClientOnly>
-                            <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer" class="px-3"
+                            <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer" class="px-3 hover:scale-110 transition-all ease-in-out duration-500"
                                 title="github">
                                 <font-awesome-icon icon="fa-brands fa-github" class="fa-xl" />
                             </a>
                             <a href="https://www.linkedin.com/in/ayitinya/" target="_blank" rel="noopener noreferrer"
-                                class="px-3" title="linkedin">
+                                class="px-3 hover:scale-110 transition-all ease-in-out duration-500" title="linkedin">
                                 <font-awesome-icon icon="fa-brands fa-linkedin-in" class="fa-xl" />
 
                             </a>
                             <a href="https://www.twitter.com/ayitinya" target="_blank" rel="noopener noreferrer"
-                                class="px-3" title="twitter">
+                                class="px-3 hover:scale-110 transition-all ease-in-out duration-500" title="twitter">
                                 <font-awesome-icon icon="fa-brands fa-twitter" class="fa-xl" />
                             </a>
                             <a href="https://stackoverflow.com/users/13605694/ayitinya" target="_blank"
-                                rel="noopener noreferrer" class="px-3" title="stackoverflow">
+                                rel="noopener noreferrer" class="px-3 hover:scale-110 transition-all ease-in-out duration-500" title="stackoverflow">
                                 <font-awesome-icon icon="fa-brands fa-stack-overflow" class="fa-xl" />
                             </a>
                             <a href="https://www.youtube.com/channel/UCXl1hGdGXXKDidPqK1Xcm1A" target="_blank"
-                                rel="noopener noreferrer" class="px-3" title="youtube">
+                                rel="noopener noreferrer" class="px-3 hover:scale-110 transition-all ease-in-out duration-500" title="youtube">
                                 <font-awesome-icon icon="fa-brands fa-youtube" class="fa-xl" />
                             </a>
-                            <a href="mailto:aytinya@outlook.com" class="px-3" title="ayitinya@outlook.com">
+                            <a href="mailto:aytinya@outlook.com" class="px-3 hover:scale-110 transition-all ease-in-out duration-500" title="ayitinya@outlook.com">
                                 <font-awesome-icon icon="fa-regular fa-envelope" class="fa-xl" />
                             </a>
                             <template #fallback>
@@ -248,29 +246,30 @@ const scrollTo = (element: HTMLElement) => {
         </div>
 
 
-        <div class="fixed bottom-0 left-0 lg:flex flex-col pl-5 pb-5 flex items-center hidden transition-all ease-in-out duration-500" ref="socialLinks">
+        <div class="fixed bottom-0 left-0 lg:flex flex-col pl-5 pb-5 flex items-center hidden transition-all ease-in-out duration-500"
+            ref="socialLinks">
             <LazyClientOnly>
-                <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer" class="pb-3"
+                <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer" class="pb-3 hover:scale-110 transition-all ease-in-out duration-500"
                     title="github">
                     <font-awesome-icon icon="fa-brands fa-github" class="fa-xl" />
                 </a>
-                <a href="https://www.linkedin.com/in/ayitinya/" target="_blank" rel="noopener noreferrer" class="pb-3"
+                <a href="https://www.linkedin.com/in/ayitinya/" target="_blank" rel="noopener noreferrer" class="pb-3 hover:scale-110 transition-all ease-in-out duration-500"
                     title="linkedin">
                     <font-awesome-icon icon="fa-brands fa-linkedin-in" class="fa-xl" />
                 </a>
-                <a href="https://www.twitter.com/ayitinya" target="_blank" rel="noopener noreferrer" class="pb-3"
+                <a href="https://www.twitter.com/ayitinya" target="_blank" rel="noopener noreferrer" class="pb-3 hover:scale-110 transition-all ease-in-out duration-500"
                     title="twitter">
                     <font-awesome-icon icon="fa-brands fa-twitter" class="fa-xl" />
                 </a>
                 <a href="https://stackoverflow.com/users/13605694/ayitinya" target="_blank" rel="noopener noreferrer"
-                    class="pb-3" title="stackoverflow">
+                    class="pb-3 hover:scale-110 transition-all ease-in-out duration-500" title="stackoverflow">
                     <font-awesome-icon icon="fa-brands fa-stack-overflow" class="fa-xl" />
                 </a>
                 <a href="https://www.youtube.com/channel/UCXl1hGdGXXKDidPqK1Xcm1A" target="_blank"
-                    rel="noopener noreferrer" class="pb-3" title="youtube">
+                    rel="noopener noreferrer" class="pb-3 hover:scale-110 transition-all ease-in-out duration-500" title="youtube">
                     <font-awesome-icon icon="fa-brands fa-youtube" class="fa-xl" />
                 </a>
-                <a href="mailto:aytinya@outlook.com" class="pb-3" title="ayitinya@outlook.com">
+                <a href="mailto:aytinya@outlook.com" class="pb-3 hover:scale-110 transition-all ease-in-out duration-500" title="ayitinya@outlook.com">
                     <font-awesome-icon icon="fa-regular fa-envelope" class="fa-xl" />
                 </a>
                 <template #fallback>
