@@ -251,9 +251,11 @@ const scrollTo = (element: HTMLElement) => {
         </div>
 
         <footer>
-            <p class="text-center">
-                Made with <font-awesome-icon icon="fa-solid fa-heart" /> and open-sourced on <a href="https://github.com/ayitinya/ayitinya.github.io" target="_blank" rel="noopener noreferrer" class="text-cyan-500">Github</a> by Ayitinya
-            </p>
+            <ClientOnly>
+                <p class="text-center">
+                    Made with <font-awesome-icon icon="fa-solid fa-heart" /> and open-sourced on <a href="https://github.com/ayitinya/ayitinya.github.io" target="_blank" rel="noopener noreferrer" class="text-cyan-500">Github</a> by Ayitinya
+                </p>
+            </ClientOnly>
         </footer>
 
         <div class="fixed bottom-0 left-0 lg:flex flex-col pl-5 pb-5 flex items-center hidden transition-all ease-in-out duration-500"
