@@ -10,7 +10,6 @@
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-LTMV89EKNM" async></Script>
       <Script src="/js/gtag.js"></Script>
     </Head>
-    <NuxtLoadingIndicator />
     <NuxtPage />
   </div>
 </template>
