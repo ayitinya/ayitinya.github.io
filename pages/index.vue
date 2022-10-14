@@ -230,8 +230,8 @@ const submitForm = async (event: Event) => {
                         <button type="submit"
                             class="border border-black px-3 py-1 my-3 rounded-md hover:shadow-lg">Send</button>
                     </form>
-                    <div>
-                        <p :class="{'hidden': formNotSent}">
+                    <div v-if="!formNotSent">
+                        <p>
                             Your message has been sent successfully. I will get back to you as soon as possible.
                         </p>
                     </div>
