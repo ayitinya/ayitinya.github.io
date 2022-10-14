@@ -142,11 +142,11 @@ const submitForm = async (event: Event) => {
                         </span>
                     </LazyClientOnly>
                     <ul class="flex flex-col justify-center items-center h-full">
-                        <li class="py-5" @click="scrollTo(about)">About Me</li>
-                        <li class="py-5" @click="scrollTo(work)">My Work</li>
-                        <li class="py-5" @click="scrollTo(contact)">Contact Me</li>
+                        <li class="py-5" @click="scrollTo(about)">aboutMe()</li>
+                        <li class="py-5" @click="scrollTo(work)">myWork()</li>
+                        <li class="py-5" @click="scrollTo(contact)">contactMe()</li>
                         <li class="py-5"><a class="border border-[#b1b1b1] px-5 py-2 rounded-md" href="/resume/resume.pdf"
-                                download="rudy_ayitinya_resume">Resume</a></li>
+                                download="rudy_ayitinya_resume">resume()</a></li>
                     </ul>
                 </div>
             </nav>
@@ -158,7 +158,7 @@ const submitForm = async (event: Event) => {
             <h1 class="lg:text-5xl md:text-4xl text-xl font-bold hidden md:block">Hello, I am Rudy Ayitinya, </h1>
             <span class="font-light lg:text-4xl text-3xl" ref="typewritterField"></span>
             <button type="button" @click="scrollTo(about)"
-                class="hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer border border-[#b1b1b1] px-3 rounded hover:shadow-lg my-3">More</button>
+                class="hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer border border-[#b1b1b1] px-3 rounded hover:shadow-lg my-3">more()</button>
         </div>
 
 
