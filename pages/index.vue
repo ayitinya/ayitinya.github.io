@@ -116,17 +116,16 @@ const submitForm = async (event: Event) => {
                 <ul class="flex-row items-center hidden md:flex">
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
                         @click="scrollTo(about)">
-                        About Me</li>
+                        aboutMe()</li>
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
-                        @click="scrollTo(work)">My
-                        Work</li>
+                        @click="scrollTo(work)">myWork()</li>
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
                         @click="scrollTo(contact)">
-                        Contact Me</li>
+                        contactMe()</li>
                     <li
                         class="transition-all ease-in-out duration-300 hover:scale-110 transition-all ease-in-out duration-500">
                         <a class="border border-black px-5 py-2 rounded-md hover:border-[#C7C7C7]"
-                            href="/resume/resume.pdf" download="rudy_ayitinya_resume">Resume</a>
+                            href="/resume/resume.pdf" download="rudy_ayitinya_resume">resume()</a>
                     </li>
                 </ul>
                 <LazyClientOnly>
@@ -166,7 +165,7 @@ const submitForm = async (event: Event) => {
         <div class="flex justify-center flex-col items-center md:px-20 px-5">
             <section id="about-me" class="min-h-screen flex flex-col justify-center max-w-[900px] off-screen"
                 ref="about">
-                <h2 class="text-3xl">About Me</h2>
+                <h2 class="text-3xl">aboutMe()</h2>
                 <div class="flex lg:flex-row flex-col">
                     <div class="md:pr-3">
                         I am, Rudy Ayitinya Sulley, an Electrical/Electronics Engineering undergraduate student at the
@@ -203,7 +202,7 @@ const submitForm = async (event: Event) => {
             </section>
 
             <section id="work" class="min-h-screen flex flex-col justify-center off-screen" ref="work">
-                <h2 class="text-3xl">My Work</h2>
+                <h2 class="text-3xl">myWork()</h2>
                 <div>
                     <p>Section under development. Please do check later</p>
                 </div>
