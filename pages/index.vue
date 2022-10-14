@@ -124,7 +124,7 @@ const submitForm = async (event: Event) => {
                         contactMe()</li>
                     <li
                         class="transition-all ease-in-out duration-300 hover:scale-110 transition-all ease-in-out duration-500">
-                        <a class="border border-black px-5 py-2 rounded-md hover:border-[#C7C7C7]"
+                        <a class="border border-[#b1b1b1F] px-5 py-2 rounded-md hover:border-[#C7C7C7]"
                             href="/resume/resume.pdf" download="rudy_ayitinya_resume">resume()</a>
                     </li>
                 </ul>
@@ -145,7 +145,7 @@ const submitForm = async (event: Event) => {
                         <li class="py-5" @click="scrollTo(about)">About Me</li>
                         <li class="py-5" @click="scrollTo(work)">My Work</li>
                         <li class="py-5" @click="scrollTo(contact)">Contact Me</li>
-                        <li class="py-5"><a class="border border-black px-5 py-2 rounded-md" href="/resume/resume.pdf"
+                        <li class="py-5"><a class="border border-[#b1b1b1] px-5 py-2 rounded-md" href="/resume/resume.pdf"
                                 download="rudy_ayitinya_resume">Resume</a></li>
                     </ul>
                 </div>
@@ -158,7 +158,7 @@ const submitForm = async (event: Event) => {
             <h1 class="lg:text-5xl md:text-4xl text-xl font-bold hidden md:block">Hello, I am Rudy Ayitinya, </h1>
             <span class="font-light lg:text-4xl text-3xl" ref="typewritterField"></span>
             <button type="button" @click="scrollTo(about)"
-                class="hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer border border-black px-3 rounded hover:shadow-lg my-3">More</button>
+                class="hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer border border-[#b1b1b1] px-3 rounded hover:shadow-lg my-3">More</button>
         </div>
 
 
@@ -217,18 +217,18 @@ const submitForm = async (event: Event) => {
                     <form action="https://formspree.io/f/mjvzrgpj" method="post" @submit.prevent="submitForm">
                         <div class="flex flex-col">
                             <label for="name">Name</label>
-                            <input type="text" name="name" id="name" class="rounded-md px-2 py-1" required>
+                            <input type="text" name="name" id="name" class="rounded-md px-2 py-1 focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#b1b1b1]" required>
                         </div>
                         <div class="flex flex-col">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" class=" rounded-md px-2 py-1" required>
+                            <input type="email" name="email" id="email" class=" rounded-md px-2 py-1 focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#b1b1b1]" required>
                         </div>
                         <div class="flex flex-col">
                             <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="3" class=" rounded-md " required></textarea>
+                            <textarea name="message" id="message" rows="3" class=" rounded-md resize-none focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#b1b1b1]" required></textarea>
                         </div>
                         <button type="submit"
-                            class="border border-black px-3 py-1 my-3 rounded-md hover:shadow-lg">Send</button>
+                            class="border border-[#b1b1b1] px-3 py-1 my-3 rounded-md hover:shadow-lg">Send</button>
                     </form>
                     <div v-if="!formNotSent">
                         <p>
@@ -340,7 +340,7 @@ const submitForm = async (event: Event) => {
                     <a href="mailto:aytinya@outlook.com" class="pb-3">Mail</a>
                 </template>
             </LazyClientOnly>
-            <div id="line" class="h-32 border-r border-black"></div>
+            <div id="line" class="h-32 border-r border-[#b1b1b1]"></div>
         </div>
     </div>
 </template>
@@ -363,7 +363,7 @@ picture::after {
     left: 10%;
     width: 100%;
     height: 100%;
-    border: 1px solid black;
+    border: 1px solid #b1b1b1;
     z-index: -99;
     transition: all 0.5s ease-in-out;
 }
