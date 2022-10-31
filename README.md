@@ -14,7 +14,7 @@ This is the source code to my personal portfolio website, [www.ayitinya.me](http
 
 ## Installation
 
-This site was built using Nuxt 3. 
+This site was built using Nuxt 3.
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
 ### Setup
@@ -34,7 +34,7 @@ pnpm install --shamefully-hoist
 
 ### Development Server
 
-Start the development server on http://localhost:3000
+Start the development server on <http://localhost:3000>
 
 ```bash
 npm run dev
