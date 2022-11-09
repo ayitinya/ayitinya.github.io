@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// @ts-ignore
 import Typewriter from 'typewriter-effect/dist/core';
 
 const typewritterField = ref<HTMLHeadingElement | null>(null)
@@ -28,15 +29,15 @@ onMounted(() => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 navbar.value?.classList.remove('bg-[#e0e0e0]')
+                navbar.value?.classList.remove('dark:bg-[#000000]')
                 navbar.value?.classList.remove('opacity-96')
-                // navbar.value?.classList.remove('text-white')
                 navbar.value?.classList.remove('drop-shadow-lg')
                 navbar.value?.classList.add('bg-transparent')
             } else {
                 navbar.value?.classList.remove('bg-transparent')
                 navbar.value?.classList.add('bg-[#e0e0e0]')
+                navbar.value?.classList.add('dark:bg-[#000000]')
                 navbar.value?.classList.add('opacity-96')
-                // navbar.value?.classList.add('text-white')
                 navbar.value?.classList.add('drop-shadow-lg')
             }
         })
@@ -108,10 +109,11 @@ const submitForm = async (event: Event) => {
 <template>
     <div>
 
-        <div id="navbar" class="sticky top-0  z-50 transition-all ease-in-out duration-500" ref="navbar">
+        <div id="navbar" class="sticky top-0  z-50 transition-all ease-in-out duration-500 dark:text-white"
+            ref="navbar">
             <nav class="flex-row justify-between flex px-5">
                 <span @click="scrollTo(hero)">
-                    <img src="/images/logo.png" class="h-12" alt="">
+                    <img src="/images/logo.png" class="h-12 dark:invert" alt="">
                 </span>
                 <ul class="flex-row items-center hidden md:flex">
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
@@ -122,8 +124,7 @@ const submitForm = async (event: Event) => {
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
                         @click="scrollTo(contact)">
                         contactMe()</li>
-                    <li
-                        class="transition-all ease-in-out duration-300 hover:scale-110 transition-all ease-in-out duration-500">
+                    <li class="hover:scale-110 transition-all ease-in-out duration-500">
                         <a class="border border-[#b1b1b1F] px-5 py-2 rounded-md hover:border-[#C7C7C7]"
                             href="/resume/resume.pdf" download="rudy_ayitinya_resume">resume()</a>
                     </li>
@@ -135,7 +136,7 @@ const submitForm = async (event: Event) => {
                 </LazyClientOnly>
 
                 <div class="bg-[#e0e0e0] w-full h-screen fixed top-0 left-0 z-50 transition-all ease-in-out duration-500"
-                    :class="{'hidden': navClosed}">
+                    :class="{ 'hidden': navClosed }">
                     <LazyClientOnly>
                         <span class="flex justify-end py-5 pr-6">
                             <font-awesome-icon icon="fa-solid fa-xmark" @click="navClosed = true" />
@@ -145,8 +146,8 @@ const submitForm = async (event: Event) => {
                         <li class="py-5" @click="scrollTo(about)">aboutMe()</li>
                         <li class="py-5" @click="scrollTo(work)">myWork()</li>
                         <li class="py-5" @click="scrollTo(contact)">contactMe()</li>
-                        <li class="py-5"><a class="border border-[#b1b1b1] px-5 py-2 rounded-md" href="/resume/resume.pdf"
-                                download="rudy_ayitinya_resume">resume()</a></li>
+                        <li class="py-5"><a class="border border-[#b1b1b1] px-5 py-2 rounded-md"
+                                href="/resume/resume.pdf" download="rudy_ayitinya_resume">resume()</a></li>
                     </ul>
                 </div>
             </nav>
@@ -217,15 +218,21 @@ const submitForm = async (event: Event) => {
                     <form action="https://formspree.io/f/mjvzrgpj" method="post" @submit.prevent="submitForm">
                         <div class="flex flex-col">
                             <label for="name">Name</label>
-                            <input type="text" name="name" id="name" class="rounded-md px-2 py-1 focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#b1b1b1]" required>
+                            <input type="text" name="name" id="name"
+                                class="rounded-md px-2 py-1 focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#b1b1b1] text-black"
+                                required>
                         </div>
                         <div class="flex flex-col">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" class=" rounded-md px-2 py-1 focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#b1b1b1]" required>
+                            <input type="email" name="email" id="email"
+                                class=" rounded-md px-2 py-1 focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#b1b1b1] text-black"
+                                required>
                         </div>
                         <div class="flex flex-col">
                             <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="3" class=" rounded-md resize-none focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#b1b1b1]" required></textarea>
+                            <textarea name="message" id="message" rows="3"
+                                class=" rounded-md resize-none focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#b1b1b1] text-black"
+                                required></textarea>
                         </div>
                         <button type="submit"
                             class="border border-[#b1b1b1] px-3 py-1 my-3 rounded-md hover:shadow-lg">Send</button>

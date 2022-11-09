@@ -1,6 +1,6 @@
 
 <template>
-  <div class="min-h-screen flex flex-col overflow-x-hidden">
+  <div class="min-h-screen flex flex-col overflow-x-hidden ">
 
     <Head>
       <Title>Rudy Ayitinya Sulley</Title>
@@ -25,5 +25,12 @@ body {
   overflow-x: hidden;
   background: #e0e0e0;
   font-size: 1.125rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000000;
+    color: #fff;
+  }
 }
 </style>
