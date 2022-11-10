@@ -135,7 +135,7 @@ const submitForm = async (event: Event) => {
                     </span>
                 </LazyClientOnly>
 
-                <div class="bg-[#e0e0e0] w-full h-screen fixed top-0 left-0 z-50 transition-all ease-in-out duration-500"
+                <div class="bg-[#e0e0e0] dark:bg-black dark:text-white w-full h-screen fixed top-0 left-0 z-50 transition-all ease-in-out duration-500"
                     :class="{ 'hidden': navClosed }">
                     <LazyClientOnly>
                         <span class="flex justify-end py-5 pr-6">
