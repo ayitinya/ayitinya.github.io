@@ -27,42 +27,45 @@ onMounted(() => {
 
     const navObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                navbar.value?.classList.remove('bg-[#e0e0e0]')
-                navbar.value?.classList.remove('dark:bg-[#000000]')
-                navbar.value?.classList.remove('opacity-96')
-                navbar.value?.classList.remove('drop-shadow-lg')
-                navbar.value?.classList.add('bg-transparent')
-            } else {
-                navbar.value?.classList.remove('bg-transparent')
-                navbar.value?.classList.add('bg-[#e0e0e0]')
-                navbar.value?.classList.add('dark:bg-[#000000]')
-                navbar.value?.classList.add('opacity-96')
-                navbar.value?.classList.add('drop-shadow-lg')
-            }
+            if (navbar.value)
+                if (entry.isIntersecting) {
+                    navbar.value.classList.remove('bg-[#e0e0e0]')
+                    navbar.value.classList.remove('dark:bg-[#000000]')
+                    navbar.value.classList.remove('opacity-96')
+                    navbar.value.classList.remove('drop-shadow-lg')
+                    navbar.value.classList.add('bg-transparent')
+                } else {
+                    navbar.value.classList.remove('bg-transparent')
+                    navbar.value.classList.add('bg-[#e0e0e0]')
+                    navbar.value.classList.add('dark:bg-[#000000]')
+                    navbar.value.classList.add('opacity-96')
+                    navbar.value.classList.add('drop-shadow-lg')
+                }
         })
     }, observerOptions)
 
-
-    navObserver.observe(hero.value)
+    if (hero.value)
+        navObserver.observe(hero.value)
 
     const contactObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                socialLinks.value?.classList.remove('opacity-100')
-                socialLinks.value?.classList.remove('pointer-events-auto')
-                socialLinks.value?.classList.add('opacity-0')
-                socialLinks.value?.classList.add('pointer-events-none')
-            } else {
-                socialLinks.value?.classList.remove('opacity-0')
-                socialLinks.value?.classList.remove('pointer-events-none')
-                socialLinks.value?.classList.add('opacity-100')
-                socialLinks.value?.classList.add('pointer-events-auto')
-            }
+            if (socialLinks.value)
+                if (entry.isIntersecting) {
+                    socialLinks.value.classList.remove('opacity-100')
+                    socialLinks.value.classList.remove('pointer-events-auto')
+                    socialLinks.value.classList.add('opacity-0')
+                    socialLinks.value.classList.add('pointer-events-none')
+                } else {
+                    socialLinks.value.classList.remove('opacity-0')
+                    socialLinks.value.classList.remove('pointer-events-none')
+                    socialLinks.value.classList.add('opacity-100')
+                    socialLinks.value.classList.add('pointer-events-auto')
+                }
         })
     }, observerOptions)
 
-    contactObserver.observe(contact.value)
+    if (contact.value)
+        contactObserver.observe(contact.value)
 
     const scrollObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -76,7 +79,8 @@ onMounted(() => {
 
     const sections = [about.value, work.value, contact.value, hero.value]
     sections.forEach(section => {
-        scrollObserver.observe(section)
+        if (section)
+            scrollObserver.observe(section)
     })
 })
 
@@ -87,6 +91,7 @@ const scrollTo = (element: HTMLElement) => {
         navClosed.value = true
     }
 }
+
 const formNotSent = ref(true)
 const submitForm = async (event: Event) => {
     const formData = new FormData(event.target as HTMLFormElement)
@@ -112,17 +117,17 @@ const submitForm = async (event: Event) => {
         <div id="navbar" class="sticky top-0  z-50 transition-all ease-in-out duration-500 dark:text-white"
             ref="navbar">
             <nav class="flex-row justify-between flex px-5">
-                <span @click="scrollTo(hero)">
+                <span @click="scrollTo(hero!)">
                     <img src="/images/logo.png" class="h-12 dark:invert" alt="">
                 </span>
                 <ul class="flex-row items-center hidden md:flex">
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
-                        @click="scrollTo(about)">
+                        @click="scrollTo(about!)">
                         aboutMe()</li>
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
-                        @click="scrollTo(work)">myWork()</li>
+                        @click="scrollTo(work!)">myWork()</li>
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
-                        @click="scrollTo(contact)">
+                        @click="scrollTo(contact!)">
                         contactMe()</li>
                     <li class="hover:scale-110 transition-all ease-in-out duration-500">
                         <a class="border border-[#b1b1b1F] px-5 py-2 rounded-md hover:border-[#C7C7C7]"
@@ -143,9 +148,9 @@ const submitForm = async (event: Event) => {
                         </span>
                     </LazyClientOnly>
                     <ul class="flex flex-col justify-center items-center h-full">
-                        <li class="py-5" @click="scrollTo(about)">aboutMe()</li>
-                        <li class="py-5" @click="scrollTo(work)">myWork()</li>
-                        <li class="py-5" @click="scrollTo(contact)">contactMe()</li>
+                        <li class="py-5" @click="scrollTo(about!)">aboutMe()</li>
+                        <li class="py-5" @click="scrollTo(work!)">myWork()</li>
+                        <li class="py-5" @click="scrollTo(contact!)">contactMe()</li>
                         <li class="py-5"><a class="border border-[#b1b1b1] px-5 py-2 rounded-md"
                                 href="/resume/resume.pdf" download="rudy_ayitinya_resume">resume()</a></li>
                     </ul>
@@ -158,7 +163,7 @@ const submitForm = async (event: Event) => {
             <h1 class="text-4xl text-center font-bold md:hidden">Rudy Ayitinya </h1>
             <h1 class="lg:text-5xl md:text-4xl text-xl font-bold hidden md:block">Hello, I am Rudy Ayitinya, </h1>
             <span class="font-light lg:text-4xl text-3xl" ref="typewritterField"></span>
-            <button type="button" @click="scrollTo(about)"
+            <button type="button" @click="scrollTo(about!)"
                 class="hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer border border-[#b1b1b1] px-3 rounded hover:shadow-lg my-3">more()</button>
         </div>
 
@@ -178,20 +183,22 @@ const submitForm = async (event: Event) => {
                         <br> <br>
                         I am proficient in the following technologies:
                         <ul class="list-inside list-disc columns-2">
-                            <li>HTML</li>
-                            <li>CSS</li>
+                            <li>HTML and CSS</li>
                             <li>JavaScript</li>
+                            <li>Typescript</li>
                             <li>Python</li>
                             <li>NodeJS</li>
                             <li>VueJS</li>
                             <li>NuxtJs</li>
-                            <li>Bootstrap</li>
                             <li>TailwindCSS</li>
+                            <li>Bootstrap</li>
+                            <li>Material UI</li>
                             <li>MySQL</li>
                             <li>MongoDB</li>
-                            <li>Git</li>
-                            <li>GitHub</li>
+                            <li>Git and GitHub</li>
                             <li>Linux</li>
+                            <li>Kotlin</li>
+                            <li>KMM</li>
                         </ul>
                     </div>
                     <div class="basis-full lg:pt-0 pt-5 flex justify-center">
@@ -304,7 +311,7 @@ const submitForm = async (event: Event) => {
             </ClientOnly>
         </footer>
 
-        <div class="fixed bottom-0 left-0 lg:flex flex-col pl-5 pb-5 flex items-center hidden transition-all ease-in-out duration-500"
+        <div class="fixed bottom-0 left-0 lg:flex flex-col pl-5 pb-5 items-center hidden transition-all ease-in-out duration-500"
             ref="socialLinks">
             <LazyClientOnly>
                 <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer"
