@@ -118,7 +118,7 @@ const submitForm = async (event: Event) => {
             ref="navbar">
             <nav class="flex-row justify-between flex px-5">
                 <span @click="scrollTo(hero!)">
-                    <img src="/images/logo.png" class="h-12 dark:invert" alt="">
+                    <img src="~/assets/images/logo.png" class="h-12 dark:invert" alt="">
                 </span>
                 <ul class="flex-row items-center hidden md:flex">
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
@@ -131,7 +131,7 @@ const submitForm = async (event: Event) => {
                         contactMe()</li>
                     <li class="hover:scale-110 transition-all ease-in-out duration-500">
                         <a class="border border-[#b1b1b1F] px-5 py-2 rounded-md hover:border-[#C7C7C7]"
-                            href="/resume/resume.pdf" download="rudy_ayitinya_resume">resume()</a>
+                            href="/docs/resume.pdf" download="rudy_ayitinya_resume">resume()</a>
                     </li>
                 </ul>
                 <LazyClientOnly>
@@ -203,7 +203,7 @@ const submitForm = async (event: Event) => {
                     </div>
                     <div class="basis-full lg:pt-0 pt-5 flex justify-center">
                         <picture id="profile" class="h-fit relative">
-                            <img src="/images/my_image.jpg" alt="image of me" class="lg:max-h-[250px] max-h-[200px]">
+                            <img src="~/assets/images/my_image.jpg" alt="image of me" class="lg:max-h-[250px] max-h-[200px]">
                         </picture>
                     </div>
                 </div>
