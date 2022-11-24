@@ -7,8 +7,6 @@
       <Meta name="viewport" content="width=device-width, initial-scale=1" />
       <Meta name="description" content="Portfolio website of a Ghanaian Freelance full stack Web developer" />
       <Meta name="google-site-verification" content="nPvXYhF2XQvp-f7lxRKmf5lqdJx1xViOwbYkhVbmFjg" />
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-LTMV89EKNM" async></Script>
-      <Script src="/js/gtag.js"></Script>
     </Head>
     <NuxtPage />
   </div>
