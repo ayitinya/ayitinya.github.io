@@ -1,3 +1,10 @@
+<script setup lang="ts">
+useHead({
+  htmlAttrs: {
+    lang: 'en',
+  },
+})
+</script>
 
 <template>
   <div class="min-h-screen flex flex-col overflow-x-hidden ">
