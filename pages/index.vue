@@ -136,7 +136,7 @@ const submitForm = async (event: Event) => {
                 </ul>
                 <LazyClientOnly>
                     <span class="md:hidden flex items-center">
-                        <font-awesome-icon icon="fa-solid fa-bars" @click="navClosed = false" />
+                        <Icon @click="navClosed = false" name="mdi-light:hamburger" />
                     </span>
                 </LazyClientOnly>
 
@@ -144,7 +144,7 @@ const submitForm = async (event: Event) => {
                     :class="{ 'hidden': navClosed }">
                     <LazyClientOnly>
                         <span class="flex justify-end py-5 pr-6">
-                            <font-awesome-icon icon="fa-solid fa-xmark" @click="navClosed = true" />
+                            <Icon @click="navClosed = true" name="material-symbols:close" />
                         </span>
                     </LazyClientOnly>
                     <ul class="flex flex-col justify-center items-center h-full">
@@ -253,32 +253,31 @@ const submitForm = async (event: Event) => {
                         <LazyClientOnly>
                             <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer"
                                 class="px-3 hover:scale-110 transition-all ease-in-out duration-500" title="github">
-                                <font-awesome-icon icon="fa-brands fa-github" class="fa-xl" />
+                                <Icon name="fa6-brands:github-alt" size="1.5rem" />
                             </a>
                             <a href="https://www.linkedin.com/in/ayitinya/" target="_blank" rel="noopener noreferrer"
                                 class="px-3 hover:scale-110 transition-all ease-in-out duration-500" title="linkedin">
-                                <font-awesome-icon icon="fa-brands fa-linkedin-in" class="fa-xl" />
-
+                                <Icon name="fa6-brands:linkedin" size="1.5rem" />
                             </a>
                             <a href="https://www.twitter.com/ayitinya" target="_blank" rel="noopener noreferrer"
                                 class="px-3 hover:scale-110 transition-all ease-in-out duration-500" title="twitter">
-                                <font-awesome-icon icon="fa-brands fa-twitter" class="fa-xl" />
+                                <Icon name="fa6-brands:twitter" size="1.5rem" />
                             </a>
                             <a href="https://stackoverflow.com/users/13605694/ayitinya" target="_blank"
                                 rel="noopener noreferrer"
                                 class="px-3 hover:scale-110 transition-all ease-in-out duration-500"
                                 title="stackoverflow">
-                                <font-awesome-icon icon="fa-brands fa-stack-overflow" class="fa-xl" />
+                                <Icon name="fa6-brands:stack-overflow" size="1.5rem" />
                             </a>
                             <a href="https://www.youtube.com/channel/UCXl1hGdGXXKDidPqK1Xcm1A" target="_blank"
                                 rel="noopener noreferrer"
                                 class="px-3 hover:scale-110 transition-all ease-in-out duration-500" title="youtube">
-                                <font-awesome-icon icon="fa-brands fa-youtube" class="fa-xl" />
+                                <Icon name="fa6-brands:youtube" size="1.5rem" />
                             </a>
                             <a href="mailto:aytinya@outlook.com"
                                 class="px-3 hover:scale-110 transition-all ease-in-out duration-500"
                                 title="ayitinya@outlook.com">
-                                <font-awesome-icon icon="fa-regular fa-envelope" class="fa-xl" />
+                                <Icon name="fa6-solid:envelope" size="1.5rem" />
                             </a>
                             <template #fallback>
                                 <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer"
@@ -302,9 +301,10 @@ const submitForm = async (event: Event) => {
 
         <footer>
             <ClientOnly>
-                <p class="text-center">
+                <p class="text-center py-2">
                     Made with
-                    <font-awesome-icon icon="fa-solid fa-heart" /> and open-sourced on <a
+                    <Icon name="fa6-solid:heart" size="1.5rem" />
+                     and open-sourced on <a
                         href="https://github.com/ayitinya/ayitinya.github.io" target="_blank" rel="noopener noreferrer"
                         class="text-cyan-500">Github</a> by Ayitinya
                 </p>
@@ -316,28 +316,28 @@ const submitForm = async (event: Event) => {
             <LazyClientOnly>
                 <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer"
                     class="pb-3 hover:scale-110 transition-all ease-in-out duration-500" title="github">
-                    <font-awesome-icon icon="fa-brands fa-github" class="fa-xl" />
+                    <Icon name="fa6-brands:github-alt" size="1.5rem" />
                 </a>
                 <a href="https://www.linkedin.com/in/ayitinya/" target="_blank" rel="noopener noreferrer"
                     class="pb-3 hover:scale-110 transition-all ease-in-out duration-500" title="linkedin">
-                    <font-awesome-icon icon="fa-brands fa-linkedin-in" class="fa-xl" />
+                    <Icon name="fa6-brands:linkedin" size="1.5rem" />
                 </a>
                 <a href="https://www.twitter.com/ayitinya" target="_blank" rel="noopener noreferrer"
                     class="pb-3 hover:scale-110 transition-all ease-in-out duration-500" title="twitter">
-                    <font-awesome-icon icon="fa-brands fa-twitter" class="fa-xl" />
+                    <Icon name="fa6-brands:twitter" size="1.5rem" />
                 </a>
                 <a href="https://stackoverflow.com/users/13605694/ayitinya" target="_blank" rel="noopener noreferrer"
                     class="pb-3 hover:scale-110 transition-all ease-in-out duration-500" title="stackoverflow">
-                    <font-awesome-icon icon="fa-brands fa-stack-overflow" class="fa-xl" />
+                    <Icon name="fa6-brands:stack-overflow" size="1.5rem" />
                 </a>
                 <a href="https://www.youtube.com/channel/UCXl1hGdGXXKDidPqK1Xcm1A" target="_blank"
                     rel="noopener noreferrer" class="pb-3 hover:scale-110 transition-all ease-in-out duration-500"
                     title="youtube">
-                    <font-awesome-icon icon="fa-brands fa-youtube" class="fa-xl" />
+                    <Icon name="fa6-brands:youtube" size="1.5rem" />
                 </a>
                 <a href="mailto:aytinya@outlook.com"
                     class="pb-3 hover:scale-110 transition-all ease-in-out duration-500" title="ayitinya@outlook.com">
-                    <font-awesome-icon icon="fa-regular fa-envelope" class="fa-xl" />
+                    <Icon name="fa6-solid:envelope" size="1.5rem" />
                 </a>
                 <template #fallback>
                     <a href="https://github.com/ayitinya" target="_blank" rel="noopener noreferrer"
