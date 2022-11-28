@@ -102,10 +102,7 @@ const submitForm = async (event: Event) => {
             'Accept': 'application/json'
         }
     }).then(response => {
-        console.log(response)
         formNotSent.value = false
-    }).catch(error => {
-        console.log(error)
     })
 }
 

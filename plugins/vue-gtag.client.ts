@@ -5,9 +5,6 @@ export default defineNuxtPlugin(nuxtApp => {
         config: {
             id: 'G-LTMV89EKNM',
         },
-        onReady() {
-            console.log("loaded script")
-        }
     },
         nuxtApp.$router
     )
