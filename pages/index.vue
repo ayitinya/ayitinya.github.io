@@ -126,6 +126,9 @@ const submitForm = async (event: Event) => {
                         aboutMe()</li>
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
                         @click="scrollTo(work!)">myWork()</li>
+                    <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer">
+                        <NuxtLink to="https://blog.ayitinya.me" :external="true">blog()</NuxtLink>
+                    </li>
                     <li class="px-5 hover:scale-110 transition-all ease-in-out duration-500 cursor-pointer"
                         @click="scrollTo(contact!)">
                         contactMe()</li>
@@ -150,6 +153,9 @@ const submitForm = async (event: Event) => {
                     <ul class="flex flex-col justify-center items-center h-full">
                         <li class="py-5" @click="scrollTo(about!)">aboutMe()</li>
                         <li class="py-5" @click="scrollTo(work!)">myWork()</li>
+                        <li class="py-5">
+                            <NuxtLink to="https://blog.ayitinya.me" :external="true">blog()</NuxtLink>
+                        </li>
                         <li class="py-5" @click="scrollTo(contact!)">contactMe()</li>
                         <li class="py-5"><a class="border border-[#b1b1b1] px-5 py-2 rounded-md"
                                 href="/resume/resume.pdf" download="rudy_ayitinya_resume">resume()</a></li>
@@ -203,7 +209,8 @@ const submitForm = async (event: Event) => {
                     </div>
                     <div class="basis-full lg:pt-0 pt-5 flex justify-center">
                         <picture id="profile" class="h-fit relative">
-                            <img src="~/assets/images/my_image.jpg" alt="image of me" class="lg:max-h-[250px] max-h-[200px]">
+                            <img src="~/assets/images/my_image.jpg" alt="image of me"
+                                class="lg:max-h-[250px] max-h-[200px]">
                         </picture>
                     </div>
                 </div>
@@ -304,9 +311,8 @@ const submitForm = async (event: Event) => {
                 <p class="text-center py-2">
                     Made with
                     <Icon name="fa6-solid:heart" size="1.5rem" />
-                     and open-sourced on <a
-                        href="https://github.com/ayitinya/ayitinya.github.io" target="_blank" rel="noopener noreferrer"
-                        class="text-cyan-500">Github</a> by Ayitinya
+                    and open-sourced on <a href="https://github.com/ayitinya/ayitinya.github.io" target="_blank"
+                        rel="noopener noreferrer" class="text-cyan-500">Github</a> by Ayitinya
                 </p>
             </ClientOnly>
         </footer>
