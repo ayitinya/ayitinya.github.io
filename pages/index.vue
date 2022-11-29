@@ -29,14 +29,12 @@ onMounted(() => {
         entries.forEach(entry => {
             if (navbar.value)
                 if (entry.isIntersecting) {
-                    navbar.value.classList.remove('bg-[#e0e0e0]')
                     navbar.value.classList.remove('dark:bg-[#000000]')
                     navbar.value.classList.remove('opacity-96')
                     navbar.value.classList.remove('drop-shadow-lg')
                     navbar.value.classList.add('bg-transparent')
                 } else {
                     navbar.value.classList.remove('bg-transparent')
-                    navbar.value.classList.add('bg-[#e0e0e0]')
                     navbar.value.classList.add('dark:bg-[#000000]')
                     navbar.value.classList.add('opacity-96')
                     navbar.value.classList.add('drop-shadow-lg')
@@ -140,7 +138,7 @@ const submitForm = async (event: Event) => {
                     </span>
                 </LazyClientOnly>
 
-                <div class="bg-[#e0e0e0] dark:bg-black dark:text-white w-full h-screen fixed top-0 left-0 z-50 transition-all ease-in-out duration-500"
+                <div class="dark:bg-black dark:text-white w-full h-screen fixed top-0 left-0 z-50 transition-all ease-in-out duration-500"
                     :class="{ 'hidden': navClosed }">
                     <LazyClientOnly>
                         <span class="flex justify-end py-5 pr-6">
