@@ -225,22 +225,24 @@ const submitForm = async (event: Event) => {
                         I am currently open for opportunities. If you have any questions, feel free to reach out to me.
                     </div>
                     <form action="https://formspree.io/f/mjvzrgpj" method="post" @submit.prevent="submitForm">
-                        <div class="flex flex-col">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name"
-                                class="rounded-md px-2 py-1 focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#b1b1b1] text-black"
-                                required>
+                        <div class="md:flex gap-4">
+                            <div class="flex flex-col my-5 md:w-1/2">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name"
+                                    class="px-2 py-1 focus-visible:outline-none border-b bg-transparent" placeholder="Your Name" required>
+                            </div>
+                            <div class="flex flex-col my-5 md:w-1/2">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email"
+                                    class="px-2 py-1 focus-visible:outline-none border-b bg-transparent" placeholder="example@provider.com" required>
+                            </div>
+
                         </div>
-                        <div class="flex flex-col">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email"
-                                class=" rounded-md px-2 py-1 focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#b1b1b1] text-black"
-                                required>
-                        </div>
-                        <div class="flex flex-col">
+                        <div class="flex flex-col my-5">
                             <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="3"
-                                class=" rounded-md resize-none focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#b1b1b1] text-black"
+                            <textarea name="message" id="message" rows="2"
+                                class="px-2 py-1 focus-visible:outline-none border-b bg-transparent"
+                                placeholder="Your message"
                                 required></textarea>
                         </div>
                         <button type="submit"
