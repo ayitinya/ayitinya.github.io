@@ -211,10 +211,40 @@ const submitForm = async (event: Event) => {
                 </div>
             </section>
 
-            <section id="work" class="min-h-screen flex flex-col justify-center off-screen" ref="work">
+            <section id="work" class="min-h-screen w-full off-screen max-w-[900px]" ref="work">
                 <h2 class="text-3xl">myWork()</h2>
                 <div>
-                    <p>Section under development. Please do check later</p>
+                    <div class="relative my-16">
+                        <figure class="">
+                            <img src="~/assets/images/apr.jpg" alt="" srcset="" class="max-h-[350px]">
+                        </figure>
+                        <div class="absolute top-0 h-full sm:h-auto sm:right-0 sm:w-4/5 sm:mt-4 p-5 dark:bg-black/75 bg-white/90 border sm:border-none">
+                            <h3>Apartment Rental Site</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, voluptatem quae
+                                accusamus inventore 
+                            </p>
+                            <p>
+                                tag
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative my-16">
+                        <figure class="">
+                            <img src="~/assets/images/apr.jpg" alt="" srcset="" class="max-h-[350px]">
+                        </figure>
+                        <div class="absolute top-0 h-full sm:h-auto sm:right-0 sm:w-4/5 sm:mt-4 p-5 dark:bg-black/75 bg-white/90 border sm:border-none">
+                            <h3>Apartment Rental Site</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, voluptatem quae
+                                accusamus inventore voluptas eaque magni commodi, quaerat iusto sed delectus esse quas
+                                doloribus quibusdam.
+                            </p>
+                            <p>
+                                tag
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -229,12 +259,14 @@ const submitForm = async (event: Event) => {
                             <div class="flex flex-col my-5 md:w-1/2">
                                 <label for="name">Name</label>
                                 <input type="text" name="name" id="name"
-                                    class="px-2 py-1 focus-visible:outline-none border-b bg-transparent" placeholder="Your Name" required>
+                                    class="px-2 py-1 focus-visible:outline-none border-b bg-transparent"
+                                    placeholder="Your Name" required>
                             </div>
                             <div class="flex flex-col my-5 md:w-1/2">
                                 <label for="email">Email</label>
                                 <input type="email" name="email" id="email"
-                                    class="px-2 py-1 focus-visible:outline-none border-b bg-transparent" placeholder="example@provider.com" required>
+                                    class="px-2 py-1 focus-visible:outline-none border-b bg-transparent"
+                                    placeholder="example@provider.com" required>
                             </div>
 
                         </div>
@@ -242,8 +274,7 @@ const submitForm = async (event: Event) => {
                             <label for="message">Message</label>
                             <textarea name="message" id="message" rows="2"
                                 class="px-2 py-1 focus-visible:outline-none border-b bg-transparent"
-                                placeholder="Your message"
-                                required></textarea>
+                                placeholder="Your message" required></textarea>
                         </div>
                         <button type="submit"
                             class="border border-[#b1b1b1] px-3 py-1 my-3 rounded-md hover:shadow-lg">Send</button>
@@ -363,12 +394,12 @@ const submitForm = async (event: Event) => {
 </template>
 
 <style scoped>
-picture>img {
+img {
     filter: brightness(0.5) grayscale(.7);
     transition: filter 0.3s ease-in-out;
 }
 
-picture:hover>img {
+picture:hover>img, img:hover {
     filter: brightness(1) grayscale(0);
 }
 
