@@ -218,31 +218,52 @@ const submitForm = async (event: Event) => {
                         <figure class="">
                             <img src="~/assets/images/apr.jpg" alt="" srcset="" class="max-h-[350px]">
                         </figure>
-                        <div class="absolute top-0 h-full sm:h-auto sm:right-0 sm:w-4/5 sm:mt-4 p-5 dark:bg-black/75 bg-white/90 border sm:border-none">
-                            <h3>Apartment Rental Site</h3>
+                        <div
+                            class="absolute top-0 min-h-full sm:h-auto sm:right-0 sm:w-4/5 sm:mt-4 p-5 dark:bg-black/75 bg-white/90 border sm:border-none flex flex-col">
+                            <h3 class="text-xl font-semibold">Apartment Rental Site</h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, voluptatem quae
-                                accusamus inventore 
+                                A SSR website for viewing apartments and houses available for rent. Built with Nuxt and
+                                TailwindCSS.
                             </p>
-                            <p>
-                                tag
-                            </p>
+                            <div class="mt-auto">
+                                <div>
+                                    <span class="mr-2">Tag</span><span class="mr-2">Tag</span><span
+                                        class="mr-2">Tag</span>
+                                </div>
+                                <div>
+                                    <NuxtLink to="" :external="true">
+                                        <Icon name="fa6-brands:github" size="1.5rem" />
+                                    </NuxtLink>
+                                    <NuxtLink to="" :external="true">
+                                        <Icon name="fa6-brands:github" size="1.5rem" />
+                                    </NuxtLink>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="relative my-16">
                         <figure class="">
                             <img src="~/assets/images/apr.jpg" alt="" srcset="" class="max-h-[350px]">
                         </figure>
-                        <div class="absolute top-0 h-full sm:h-auto sm:right-0 sm:w-4/5 sm:mt-4 p-5 dark:bg-black/75 bg-white/90 border sm:border-none">
-                            <h3>Apartment Rental Site</h3>
+                        <div
+                            class="absolute top-0 h-full sm:h-auto sm:right-0 sm:w-4/5 sm:mt-4 p-5 dark:bg-black/75 bg-white/90 border sm:border-none flex flex-col">
+                            <h3 class="text-xl font-semibold">School Management System</h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, voluptatem quae
-                                accusamus inventore voluptas eaque magni commodi, quaerat iusto sed delectus esse quas
-                                doloribus quibusdam.
+                                A platform for schools to track, manage and record academic performance of students,
+                                while keeping data and financial information about them.
+                                Built with VueJS and Django.
                             </p>
-                            <p>
-                                tag
-                            </p>
+                            <div class="mt-auto">
+                                <div>
+                                    <span class="mr-2">Tag</span><span class="mr-2">Tag</span><span
+                                        class="mr-2">Tag</span>
+                                </div>
+                                <div>
+                                    <NuxtLink to="" :external="true">
+                                        <Icon name="fa6-brands:github" size="1.5rem" />
+                                    </NuxtLink>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -399,7 +420,8 @@ img {
     transition: filter 0.3s ease-in-out;
 }
 
-picture:hover>img, img:hover {
+picture:hover>img,
+img:hover {
     filter: brightness(1) grayscale(0);
 }
 
