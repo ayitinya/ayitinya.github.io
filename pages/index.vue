@@ -216,26 +216,28 @@ const submitForm = async (event: Event) => {
                 <div>
                     <div class="relative my-16">
                         <figure class="">
-                            <img src="~/assets/images/apr.jpg" alt="" srcset="" class="max-h-[350px]">
+                            <img src="~/assets/images/apr.jpg" alt="" srcset="" class="max-h-[350px] w-full sm:w-auto object-cover hover:object-contain transition-all duration-1000">
                         </figure>
                         <div
-                            class="absolute top-0 min-h-full sm:h-auto sm:right-0 sm:w-4/5 sm:mt-4 p-5 dark:bg-black/75 bg-white/90 border sm:border-none flex flex-col">
-                            <h3 class="text-xl font-semibold">Apartment Rental Site</h3>
+                            class="sm:absolute sm:top-0 h-full sm:h-auto sm:right-0 sm:w-4/5 sm:mt-4 p-5 dark:bg-black/75 bg-white/90 border dark:border-gray-800/60 sm:border-none flex flex-col">
+                            <h3 class="text-xl font-semibold my-3">Apartment Rental Site</h3>
                             <p>
-                                A SSR website for viewing apartments and houses available for rent. Built with Nuxt and
+                                A SSR website for viewing apartments and houses available for rent. Built with Nuxt,
+                                Django and
                                 TailwindCSS.
                             </p>
                             <div class="mt-auto">
                                 <div>
-                                    <span class="mr-2">Tag</span><span class="mr-2">Tag</span><span
-                                        class="mr-2">Tag</span>
+                                    <span class="mr-2">Nuxt</span>
+                                    <span class="mr-2">Django</span>
+                                    <span class="mr-2">TailwindCSS</span>
                                 </div>
                                 <div>
-                                    <NuxtLink to="" :external="true">
+                                    <NuxtLink to="" :external="true" class="mr-2">
                                         <Icon name="fa6-brands:github" size="1.5rem" />
                                     </NuxtLink>
-                                    <NuxtLink to="" :external="true">
-                                        <Icon name="fa6-brands:github" size="1.5rem" />
+                                    <NuxtLink to="apartment-rental-site.vercel.app" :external="true" class="mr-2">
+                                        <Icon name="line-md:external-link-rounded" size="1.5rem" />
                                     </NuxtLink>
                                 </div>
                             </div>
@@ -243,11 +245,11 @@ const submitForm = async (event: Event) => {
                     </div>
                     <div class="relative my-16">
                         <figure class="">
-                            <img src="~/assets/images/apr.jpg" alt="" srcset="" class="max-h-[350px]">
+                            <img src="~/assets/images/sms.png" alt="" srcset="" class="max-h-[350px] w-full sm:w-auto object-cover hover:object-contain transition-all duration-1000">
                         </figure>
                         <div
-                            class="absolute top-0 h-full sm:h-auto sm:right-0 sm:w-4/5 sm:mt-4 p-5 dark:bg-black/75 bg-white/90 border sm:border-none flex flex-col">
-                            <h3 class="text-xl font-semibold">School Management System</h3>
+                            class="sm:absolute sm:top-0 h-full sm:h-auto sm:right-0 sm:w-4/5 sm:mt-4 p-5 dark:bg-black/75 bg-white/90 border dark:border-gray-800/60 sm:border-none flex flex-col">
+                            <h3 class="text-xl font-semibold my-3">School Management System</h3>
                             <p>
                                 A platform for schools to track, manage and record academic performance of students,
                                 while keeping data and financial information about them.
@@ -255,13 +257,60 @@ const submitForm = async (event: Event) => {
                             </p>
                             <div class="mt-auto">
                                 <div>
-                                    <span class="mr-2">Tag</span><span class="mr-2">Tag</span><span
-                                        class="mr-2">Tag</span>
+                                    <div>
+                                        <span class="mr-2">Vue</span>
+                                        <span class="mr-2">Django</span>
+                                        <span class="mr-2">Bootstrap</span>
+                                        <span class="mr-2">PWA</span>
+                                    </div>
                                 </div>
                                 <div>
-                                    <NuxtLink to="" :external="true">
+                                    <NuxtLink to="" :external="true" class="mr-2">
                                         <Icon name="fa6-brands:github" size="1.5rem" />
                                     </NuxtLink>
+                                    <NuxtLink to="https://school-management-system-nu.vercel.app" :external="true"
+                                        class="mr-2">
+                                        <Icon name="line-md:external-link-rounded" size="1.5rem" />
+                                    </NuxtLink>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-16">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div class="p-5 border dark:border-gray-800/60 flex flex-col">
+                                <h3 class="text-xl font-semibold my-3">Portfolio Website</h3>
+                                <p>
+                                    Of course, my portfolio website is a project too
+                                </p>
+                                <div class="mt-auto">
+                                    <div>
+                                        <span class="mr-2">Nuxt</span>
+                                        <span class="mr-2">TailwindCSS</span>
+                                    </div>
+                                    <div>
+                                        <NuxtLink to="" :external="true" class="mr-2">
+                                            <Icon name="fa6-brands:github" size="1.5rem" />
+                                        </NuxtLink>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 border dark:border-gray-800/60 flex flex-col">
+                                <h3 class="text-xl font-semibold my-3">Personal Blog</h3>
+                                <p>
+                                    A SSR website built with Nuxt, Nuxt Content and TailwindCSS. I write about topics I
+                                    wish I knew before I started web development.
+                                </p>
+                                <div class="mt-auto">
+                                    <div>
+                                    <span class="mr-2">Nuxt Content</span>
+                                    <span class="mr-2">TailwindCSS</span>
+                                </div>
+                                    <div>
+                                        <NuxtLink to="https://blog.ayitinya.me" :external="true" class="mr-2">
+                                            <Icon name="line-md:external-link-rounded" size="1.5rem" />
+                                        </NuxtLink>
+                                    </div>
                                 </div>
                             </div>
                         </div>
