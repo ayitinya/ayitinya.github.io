@@ -205,7 +205,7 @@ const submitForm = async (event: Event) => {
                     <div class="basis-full lg:pt-0 pt-5 flex justify-center">
                         <picture id="profile" class="h-fit relative">
                             <img src="~/assets/images/my_image.jpg" alt="image of me"
-                                class="lg:max-h-[250px] max-h-[200px]">
+                                class="lg:max-h-[250px] max-h-[200px] brightness-50 grayscale-[0.7]">
                         </picture>
                     </div>
                 </div>
@@ -216,7 +216,7 @@ const submitForm = async (event: Event) => {
                 <div class="relative my-16">
                     <figure class="">
                         <img src="~/assets/images/apr.jpg" alt="" srcset=""
-                            class="max-h-[350px] w-full sm:w-auto object-cover hover:object-contain transition-all duration-1000">
+                            class="max-h-[350px] w-full sm:w-auto object-cover brightness-50 grayscale-[0.7] hover:object-contain transition-all duration-1000">
                     </figure>
                     <div
                         class="sm:absolute sm:top-0 h-full sm:h-auto sm:right-0 sm:w-4/5 sm:mt-4 p-5 dark:bg-black/75 bg-white/90 border dark:border-gray-800/60 sm:border-none flex flex-col">
@@ -246,7 +246,7 @@ const submitForm = async (event: Event) => {
                 <div class="relative my-16">
                     <figure class="">
                         <img src="~/assets/images/sms.png" alt="" srcset=""
-                            class="max-h-[350px] w-full sm:w-auto object-cover hover:object-contain transition-all duration-1000">
+                            class="max-h-[350px] w-full sm:w-auto object-cover brightness-50 grayscale-[0.7] hover:object-contain transition-all duration-1000">
                     </figure>
                     <div
                         class="sm:absolute sm:top-0 h-full sm:h-auto sm:right-0 sm:w-4/5 sm:mt-4 p-5 dark:bg-black/75 bg-white/90 border dark:border-gray-800/60 sm:border-none flex flex-col">
@@ -464,10 +464,6 @@ const submitForm = async (event: Event) => {
 </template>
 
 <style scoped>
-img {
-    filter: brightness(0.5) grayscale(.7);
-    transition: filter 0.3s ease-in-out;
-}
 
 picture:hover>img,
 img:hover {
