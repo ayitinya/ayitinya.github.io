@@ -17,7 +17,7 @@ withDefaults(
 
 <template>
     <div class="flex flex-col border">
-        <NuxtImg provider="cloudinary" quality="50"  :src="image" :alt="imgAlt" class="w-full max-h-60 object-cover hover:object-scale-down" />
+        <NuxtImg provider="cloudinary" quality="45"  :src="image" :alt="imgAlt" format="webp" loading="lazy" class="w-full max-h-60 object-cover hover:object-scale-down" />
         <div class="p-4 min-h-[200px] flex flex-col mt-auto">
             <h4 class="text-2xl font-bold">{{ title }}</h4>
             <p class="text-lg font-thin">
