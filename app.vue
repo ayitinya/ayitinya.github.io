@@ -1,4 +1,7 @@
 <script setup lang="ts">
+// @ts-ignore
+import Typewriter from 'typewriter-effect/dist/core';
+
 useHead({
   htmlAttrs: {
     lang: 'en',
@@ -70,6 +73,18 @@ const submitForm = async (event: Event) => {
     formNotSent.value = false
   })
 }
+
+const typewriterField = ref<HTMLHeadingElement | null>(null)
+
+onMounted(() => {
+  const typewriter = new Typewriter(typewriterField.value, {
+        loop: true,
+        delay: 100,
+        autoStart: true,
+        deleteSpeed: 25,
+        strings: ['a web developer', 'an engineer', 'a student', 'a gamer', 'a creator', 'a learner', 'a teacher', 'a friend', 'a human'],
+    });
+})
 </script>
 
 <template>
@@ -130,7 +145,7 @@ const submitForm = async (event: Event) => {
         <div class="">
           <span class="">Hey there 👋, I am</span>
           <h1 class="text-7xl font-bold">Rudy Ayitinya</h1>
-          <h2 class="text-2xl md:text-4xl font-bold">A Full Stack Developer</h2>
+          <h2 class="text-2xl md:text-4xl font-bold" ref="typewriterField">A Full Stack Developer</h2>
           <p class="text-lg">
             Have a project in mind? Let's work together.
           </p>
