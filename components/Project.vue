@@ -23,7 +23,7 @@ withDefaults(
             <p class="text-lg font-thin">
                 {{ description }}
             </p>
-            <div class="flex flex-row gap-4 mt-auto">
+            <div class="flex flex-col sm:flex-row gap-4 mt-auto text-center">
                 <NuxtLink v-if="website" :external="true" :to="website" target="_blank"
                     class="bg-black text-white rounded-lg border p-2">View Website</NuxtLink>
                 <NuxtLink v-if="sourceCode" :external="true" :to="sourceCode" target="_blank"
