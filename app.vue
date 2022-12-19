@@ -312,7 +312,8 @@ const submitForm = async (event: Event) => {
             </div>
             <div class="flex flex-row gap-4 items-center">
               <Icon name="mdi:map-marker" size="2rem" />
-              <a href="https://goo.gl/maps/6Z5Z9Z9Z9Z9Z9Z9Z9" class="text-xl font-bold">
+              <a href="https://www.google.com/maps/place/Accra/@5.5913754,-0.2497694,12z/data=!3m1!4b1!4m5!3m4!1s0xfdf9084b2b7a773:0xbed14ed8650e2dd3!8m2!3d5.6037168!4d-0.1869644"
+                class="text-xl font-bold">
                 Accra, Ghana
               </a>
             </div>
