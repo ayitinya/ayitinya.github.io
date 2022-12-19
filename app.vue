@@ -125,7 +125,7 @@ const submitForm = async (event: Event) => {
 
   <main class="container px-4 mx-auto min-h-screen my-8">
 
-    <section class="min-h-[60vh] relative">
+    <section class="min-h-[60vh] portrait:min-h-fit relative">
       <div class="flex flex-col md:flex-row justify-between items-center gap-8 ">
         <div class="">
           <span class="">Hey there 👋, I am</span>
@@ -196,7 +196,7 @@ const submitForm = async (event: Event) => {
 
     </section>
 
-    <section class="my-60 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section class="my-60 portrait:my-16 grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
         <h2 class="text-3xl font-bold text-center underline my-2">Languages</h2>
         <div class="flex flex-row flex-wrap gap-4 justify-center">
@@ -275,7 +275,7 @@ const submitForm = async (event: Event) => {
     </section>
 
 
-    <section class="my-60" id="projects">
+    <section class="my-60 portrait:my-16" id="projects">
       <h2 class="text-2xl font-thin">Work</h2>
       <h3 class="text-3xl font-bold">Projects I Have Worked On</h3>
 
@@ -286,7 +286,7 @@ const submitForm = async (event: Event) => {
       </div>
     </section>
 
-    <section class="my-60" id="contact">
+    <section class="my-60 portrait:my-16" id="contact">
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
         <div class="flex flex-col">
@@ -361,7 +361,7 @@ const submitForm = async (event: Event) => {
 
           <div class="flex flex-col gap-4 mt-4">
             <label for="message" class="text-xl font-bold">Message</label>
-            <textarea name="message" id="message" cols="30" rows="10" class="border-2 border-gray-300 p-2 rounded-md"
+            <textarea name="message" id="message" cols="30" rows="6" class="border-2 border-gray-300 p-2 rounded-md"
               placeholder="Your message" required></textarea>
           </div>
 
