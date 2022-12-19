@@ -56,6 +56,20 @@ const projects = [
 ]
 
 const navClosed = ref(true)
+
+const formNotSent = ref(true)
+const submitForm = async (event: Event) => {
+  const formData = new FormData(event.target as HTMLFormElement)
+  fetch("https://formspree.io/f/mjvzrgpj", {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    formNotSent.value = false
+  })
+}
 </script>
 
 <template>
@@ -331,29 +345,35 @@ const navClosed = ref(true)
 
         </div>
 
-        <form>
+        <form action="https://formspree.io/f/mjvzrgpj" method="post" @submit.prevent="submitForm">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="flex flex-col gap-4">
               <label for="name" class="text-xl font-bold">Name</label>
               <input type="text" name="name" id="name" class="border-2 border-gray-300 p-2 rounded-md"
-                placeholder="Your name" />
+                placeholder="Your name" required />
             </div>
             <div class="flex flex-col gap-4">
               <label for="email" class="text-xl font-bold">Email</label>
               <input type="email" name="email" id="email" class="border-2 border-gray-300 p-2 rounded-md"
-                placeholder="Your email" />
+                placeholder="Your email" required />
             </div>
           </div>
 
           <div class="flex flex-col gap-4 mt-4">
             <label for="message" class="text-xl font-bold">Message</label>
             <textarea name="message" id="message" cols="30" rows="10" class="border-2 border-gray-300 p-2 rounded-md"
-              placeholder="Your message"></textarea>
+              placeholder="Your message" required></textarea>
           </div>
 
           <button type="submit" class="bg-black text-white font-bold py-2 px-4 rounded-md mt-4">
             Send
           </button>
+
+          <div v-if="!formNotSent">
+            <p>
+              Your message has been sent successfully. I will get back to you as soon as possible.
+            </p>
+          </div>
         </form>
       </div>
 
