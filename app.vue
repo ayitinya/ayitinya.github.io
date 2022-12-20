@@ -49,6 +49,14 @@ const projects = [
     sourceCode: 'https://github.com/ayitinya/educational-org-site',
   },
   {
+    title: 'Blog Site',
+    description: 'A blog site where users can create and read blog posts. Add a post if you check out the site.',
+    image: 'v1671533537/portfolio/Screen_Shot_2022-12-20_at_10.50.00_knz3fd.png',
+    imgAlt: 'Blog Site',
+    website: 'https://blog-ayitinya.vercel.app/',
+    sourceCode: 'https://github.com/ayitinya/blog-site/tree/main'
+  },
+  {
     title: 'Personal Blog',
     description: 'My personal blog where I write about my experiences as a developer.',
     image: 'v1671459117/portfolio/Screen_Shot_2022-12-19_at_14.11.56_arekyj.png',
