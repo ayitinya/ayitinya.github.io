@@ -29,7 +29,7 @@ const projects = [
     description: 'A site that allows users to rent apartments in Ghana.',
     image: 'v1671458421/portfolio/apr_yghk5y.jpg',
     imgAlt: 'Apartment Rental Site',
-    website: 'https://apartment-rental-site.netlify.app/',
+    website: 'https://apartment-rental-site.vercel.app/',
     sourceCode: 'https://github.com/ayitinya/apartment-rental-site',
   },
   {
@@ -86,12 +86,12 @@ const typewriterField = ref<HTMLHeadingElement | null>(null)
 
 onMounted(() => {
   const typewriter = new Typewriter(typewriterField.value, {
-        loop: true,
-        delay: 100,
-        autoStart: true,
-        deleteSpeed: 25,
-        strings: ['a web developer', 'an engineer', 'a student', 'a gamer', 'a creator', 'a learner', 'a teacher', 'a friend', 'a human'],
-    });
+    loop: true,
+    delay: 100,
+    autoStart: true,
+    deleteSpeed: 25,
+    strings: ['a web developer', 'an engineer', 'a student', 'a gamer', 'a creator', 'a learner', 'a teacher', 'a friend', 'a human'],
+  });
 })
 </script>
 
