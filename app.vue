@@ -41,6 +41,14 @@ const projects = [
     sourceCode: 'https://github.com/ayitinya/school-management-system',
   },
   {
+    title: 'School Website',
+    description: 'A school website that allows schools to showcase their school to the world.',
+    image: 'v1672378865/portfolio/Screen_Shot_2022-12-30_at_05.38.08_dke80c.png',
+    imgAlt: 'School website',
+    website: 'https://lfsc-website.vercel.app/',
+    sourceCode: 'https://github.com/ayitinya/school-landing-page'
+  },
+  {
     title: 'Study Abroad Site',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
     image: 'v1671458903/portfolio/Screen_Shot_2022-12-19_at_14.08.07_pynnak.png',
