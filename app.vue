@@ -27,7 +27,7 @@ const projects = [
   {
     title: 'Apartment Rental Site',
     description: 'A site that allows users to rent apartments in Ghana.',
-    image: 'v1671458421/portfolio/apr_yghk5y.jpg',
+    image: 'v1672400510/portfolio/Screen_Shot_2022-12-30_at_11.41.50_rpa4zg.png',
     imgAlt: 'Apartment Rental Site',
     website: 'https://apartment-rental-site.vercel.app/',
     sourceCode: 'https://github.com/ayitinya/apartment-rental-site',
@@ -35,7 +35,7 @@ const projects = [
   {
     title: 'School Management System',
     description: 'A school management system that allows schools to manage their students, teachers, and courses.',
-    image: 'v1671458421/portfolio/sms_vlwpat.png',
+    image: 'v1672400610/portfolio/Screen_Shot_2022-12-30_at_11.43.25_rvskru.png',
     imgAlt: 'School Management System',
     website: 'https://school-management-system-nu.vercel.app',
     sourceCode: 'https://github.com/ayitinya/school-management-system',
@@ -43,7 +43,7 @@ const projects = [
   {
     title: 'School Website',
     description: 'A school website that allows schools to showcase their school to the world.',
-    image: 'v1672378865/portfolio/Screen_Shot_2022-12-30_at_05.38.08_dke80c.png',
+    image: 'v1672399883/portfolio/Screen_Shot_2022-12-30_at_11.31.19_osl2oa.png',
     imgAlt: 'School website',
     website: 'https://lfsc-website.vercel.app/',
     sourceCode: 'https://github.com/ayitinya/school-landing-page'
@@ -51,7 +51,7 @@ const projects = [
   {
     title: 'Study Abroad Site',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
-    image: 'v1671458903/portfolio/Screen_Shot_2022-12-19_at_14.08.07_pynnak.png',
+    image: 'v1672400714/portfolio/Screen_Shot_2022-12-30_at_11.45.20_t4edam.png',
     imgAlt: 'Study Abroad Site',
     website: 'https://educational-org-site.vercel.app/',
     sourceCode: 'https://github.com/ayitinya/educational-org-site',
@@ -59,19 +59,11 @@ const projects = [
   {
     title: 'Blog Site',
     description: 'A blog site where users can create and read blog posts. Add a post if you check out the site.',
-    image: 'v1671533537/portfolio/Screen_Shot_2022-12-20_at_10.50.00_knz3fd.png',
+    image: 'v1672400818/portfolio/Screen_Shot_2022-12-30_at_11.46.56_l8kpnt.png',
     imgAlt: 'Blog Site',
     website: 'https://blog-ayitinya.vercel.app/',
     sourceCode: 'https://github.com/ayitinya/blog-site/tree/main'
   },
-  {
-    title: 'Personal Blog',
-    description: 'My personal blog where I write about my experiences as a developer.',
-    image: 'v1671459117/portfolio/Screen_Shot_2022-12-19_at_14.11.56_arekyj.png',
-    imgAlt: 'Personal Blog',
-    website: 'https://blog.ayitinya.me',
-    sourceCode: '',
-  }
 ]
 
 const navClosed = ref(true)
