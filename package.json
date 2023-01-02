@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^3.0.1",
-    "typewriter-effect": "^2.19.0",
-    "vue-gtag": "^2.0.1"
+    "vue-gtag": "^2.0.1",
+    "vue-typewriter-effect": "^0.0.0"
   }
 }

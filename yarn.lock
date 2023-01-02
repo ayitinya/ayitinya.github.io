@@ -4889,6 +4889,13 @@ vue-router@^4.1.6:
   dependencies:
     "@vue/devtools-api" "^6.4.5"
 
+vue-typewriter-effect@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/vue-typewriter-effect/-/vue-typewriter-effect-0.0.0.tgz#684ae6d3adc741eb93c6b154dcbaaf31e43513e6"
+  integrity sha512-9qyh5ViB8YqzoDgcRo7H//Rgsx3kpEoEWWAx2icB0iw/AeQxhmA+MZz877O7nrBJm5/vLAYiZUvMFlvugC2UOw==
+  dependencies:
+    typewriter-effect "^2.19.0"
+
 vue@^3.2.45:
   version "3.2.45"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.45.tgz#94a116784447eb7dbd892167784619fef379b3c8"
