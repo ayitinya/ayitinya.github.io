@@ -18,8 +18,7 @@
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
-    "@fortawesome/vue-fontawesome": "^3.0.1",
     "vue-gtag": "^2.0.1",
-    "vue-typewriter-effect": "^0.0.0"
+    "vue-typewriter-effect": "^0.1.2"
   }
 }

@@ -394,11 +394,6 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.16.9.tgz#4595a29c2930c5157aa1be0963abbbac989647c9"
   integrity sha512-C4ZX+YFIp6+lPrru3tpH6Gaapy8IBRHw/e7l63fzGDhn/EaiGpQgbIlT5paByyy+oMvRFQoxxyvC4LE0AjJMqQ==
 
-"@fortawesome/vue-fontawesome@^3.0.1":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-3.0.2.tgz#1b2ec546caab790c38d3dcb38407485a70703dd2"
-  integrity sha512-xHVtVY8ASUeEvgcA/7vULUesENhD+pi/EirRHdMBqooHlXBqK+yrV6d8tUye1m5UKQKVgYAHMhUBfOnoiwvc8Q==
-
 "@iconify/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
@@ -4889,10 +4884,10 @@ vue-router@^4.1.6:
   dependencies:
     "@vue/devtools-api" "^6.4.5"
 
-vue-typewriter-effect@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/vue-typewriter-effect/-/vue-typewriter-effect-0.0.0.tgz#684ae6d3adc741eb93c6b154dcbaaf31e43513e6"
-  integrity sha512-9qyh5ViB8YqzoDgcRo7H//Rgsx3kpEoEWWAx2icB0iw/AeQxhmA+MZz877O7nrBJm5/vLAYiZUvMFlvugC2UOw==
+vue-typewriter-effect@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/vue-typewriter-effect/-/vue-typewriter-effect-0.1.2.tgz#bd64ceafa5f95b2cecbbc5679f1187bc09b4f941"
+  integrity sha512-Aozisjaz9bmbPf6ndmurd+3sJS+kfChKEazdGdvzuI3D9/Ktbmb19ONnRRKRCCMUXwS9hIAQ7H3Vf5Jx6vrnLQ==
   dependencies:
     typewriter-effect "^2.19.0"
 
