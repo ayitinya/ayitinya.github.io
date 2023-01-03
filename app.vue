@@ -82,6 +82,12 @@ const notableProjects = [
     website: "https://ayitinya.github.io/vue-typewriter-effect/",
     sourceCode: "https://github.com/ayitinya/vue-typewriter-effect/",
   },
+  {
+    title: "Commmerce Telegram Bot",
+    description: `A bot built that provides a medium to make purchases on telegram. 
+    Has an admin interface to update items and manage orders.\nBuilt with python`,
+    sourceCode: "https://github.com/ayitinya/commerce-telegram-bot",
+  },
 ];
 
 const navClosed = ref(true);
@@ -365,7 +371,7 @@ const submitForm = async (event: Event) => {
 
     <section class="my-40 portrait:my-16" id="projects">
       <h2 class="text-2xl font-thin">Work</h2>
-      
+
       <h3 class="text-3xl font-bold">Projects I Have Worked On</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
         <Project
