@@ -75,6 +75,15 @@ const projects = [
   },
 ];
 
+const notableProjects = [
+  {
+    title: "Vue Typewriter Effect",
+    description: "A Vue 3 component wrapper of typewriter-effect.",
+    website: "https://ayitinya.github.io/vue-typewriter-effect/",
+    sourceCode: "https://github.com/ayitinya/vue-typewriter-effect/",
+  },
+];
+
 const navClosed = ref(true);
 
 const formNotSent = ref(true);
@@ -356,8 +365,8 @@ const submitForm = async (event: Event) => {
 
     <section class="my-60 portrait:my-16" id="projects">
       <h2 class="text-2xl font-thin">Work</h2>
+      
       <h3 class="text-3xl font-bold">Projects I Have Worked On</h3>
-
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
         <Project
           v-for="(project, index) in projects"
@@ -366,6 +375,18 @@ const submitForm = async (event: Event) => {
           :description="project.description"
           :image="project.image"
           :img-alt="project.imgAlt"
+          :source-code="project.sourceCode"
+          :website="project.website"
+        />
+      </div>
+
+      <h3 class="text-3xl font-bold">Other Notable Projects</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
+        <NotableProject
+          v-for="(project, index) in notableProjects"
+          :key="index"
+          :title="project.title"
+          :description="project.description"
           :source-code="project.sourceCode"
           :website="project.website"
         />
