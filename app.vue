@@ -284,7 +284,7 @@ const submitForm = async (event: Event) => {
       </div>
     </section>
 
-    <section class="my-60 portrait:my-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section class="my-40 portrait:my-16 grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
         <h2 class="text-3xl font-bold text-center underline my-2">Languages</h2>
         <div class="flex flex-row flex-wrap gap-4 justify-center">
@@ -363,7 +363,7 @@ const submitForm = async (event: Event) => {
       </div>
     </section>
 
-    <section class="my-60 portrait:my-16" id="projects">
+    <section class="my-40 portrait:my-16" id="projects">
       <h2 class="text-2xl font-thin">Work</h2>
       
       <h3 class="text-3xl font-bold">Projects I Have Worked On</h3>
@@ -393,7 +393,7 @@ const submitForm = async (event: Event) => {
       </div>
     </section>
 
-    <section class="my-60 portrait:my-16" id="contact">
+    <section class="my-40 portrait:my-16" id="contact">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
         <div class="flex flex-col">
           <h2 class="text-2xl font-thin">Contact</h2>
