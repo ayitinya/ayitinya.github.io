@@ -26,7 +26,7 @@ withDefaults(
           :external="true"
           :to="website"
           target="_blank"
-          class="bg-black text-white rounded-lg border p-2"
+          class="bg-black text-white rounded-lg border border-black p-2 hover:bg-white hover:text-black hover:border-black transition-all duration-300"
           >View Website</NuxtLink
         >
         <NuxtLink
@@ -34,7 +34,7 @@ withDefaults(
           :external="true"
           :to="sourceCode"
           target="_blank"
-          class="border border-black rounded-lg p-2"
+          class="border border-black rounded-lg p-2 hover:bg-black hover:text-white transition-all duration-300"
           >View Source</NuxtLink
         >
       </div>

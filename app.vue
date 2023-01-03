@@ -131,7 +131,7 @@ const submitForm = async (event: Event) => {
       <a
         href="docs/resume.pdf"
         download="rudy-ayitinya-resume"
-        class="hidden sm:inline-block border border-black bg-black text-white p-2 rounded-lg hover:bg-white hover:text-black"
+        class="hidden sm:inline-block border border-black bg-black text-white p-2 rounded-lg hover:bg-white hover:text-black transition-all duration-300"
       >
         Download Resume
       </a>
@@ -162,7 +162,7 @@ const submitForm = async (event: Event) => {
           <a
             href="docs/resume.pdf"
             download="rudy-ayitinya-resume"
-            class="border border-black bg-black text-white p-2 rounded-lg hover:bg-white hover:text-black"
+            class="border border-black bg-black text-white p-2 rounded-lg hover:bg-white hover:text-black transition-all duration-300"
           >
             Download Resume
           </a>
@@ -194,10 +194,16 @@ const submitForm = async (event: Event) => {
           />
           <p class="text-lg">Have a project in mind? Let's work together.</p>
           <div class="flex flex-row gap-4 mt-8 justify-center md:justify-start">
-            <NuxtLink to="#projects" class="p-3 bg-black text-white rounded-lg">
+            <NuxtLink
+              to="#projects"
+              class="p-3 bg-black border border-black text-white rounded-lg hover:bg-white hover:text-black transition-all duration-300"
+            >
               My Projects
             </NuxtLink>
-            <NuxtLink to="#contact" class="p-3 border border-black rounded-lg">
+            <NuxtLink
+              to="#contact"
+              class="p-3 border border-black rounded-lg hover:bg-black hover:border-white hover:text-white transition-all duration-300"
+            >
               Contact Me
             </NuxtLink>
           </div>
@@ -532,7 +538,7 @@ const submitForm = async (event: Event) => {
 
           <button
             type="submit"
-            class="bg-black text-white font-bold py-2 px-4 rounded-md mt-4"
+            class="bg-black border border-black text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-white hover:text-black transition-all duration-300"
           >
             Send
           </button>
@@ -553,12 +559,13 @@ const submitForm = async (event: Event) => {
       Made with
       <Icon name="fa6-solid:heart" size="1.5rem" />
       and open-sourced on
-      <a
-        href="https://github.com/ayitinya/ayitinya.github.io"
+      <NuxtLink
+        :external="true"
+        to="https://github.com/ayitinya/ayitinya.github.io"
         target="_blank"
         rel="noopener noreferrer"
         class="text-cyan-500"
-        >Github</a
+        >Github</NuxtLink
       >
       by Ayitinya
     </p>
