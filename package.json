@@ -15,7 +15,7 @@
     "nuxt": "3.1.2",
     "nuxt-icon": "^0.2.10",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.6"
   },
   "dependencies": {
     "vue-gtag": "^2.0.1",
