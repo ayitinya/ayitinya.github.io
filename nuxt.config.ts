@@ -14,6 +14,9 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
+    SPOTIFY_CLIENT_ID: process.env.SPOTIFY_CLIENT_ID ?? "",
+    SPOTIFY_CLIENT_SECRET: process.env.SPOTIFY_CLIENT_SECRET ?? "",
+    SPOTIFY_REFRESH_TOKEN: process.env.SPOTIFY_REFRESH_TOKEN ?? "",
     public: {
       ENV: process.env.VERCEL_ENV || process.env.NODE_ENV || "development",
       G_TAG_ID: process.env.G_TAG_ID,
