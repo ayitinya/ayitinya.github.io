@@ -21,6 +21,6 @@
   },
   "dependencies": {
     "vue-gtag": "^2.0.1",
-    "vue-typewriter-effect": "^0.1.2"
+    "vue-typewriter-effect": "^1.0.1"
   }
 }
