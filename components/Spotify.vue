@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data } = useFetch("/api/spotify/now_playing");
+const { data } = useLazyFetch("/api/spotify/now_playing");
 </script>
 
 <template>
