@@ -1,6 +1,11 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/color-mode", "nuxt-icon", "@nuxt/image-edge"],
+  modules: [
+    "@nuxtjs/color-mode",
+    "nuxt-icon",
+    "@nuxt/image-edge",
+    "nuxt-typed-router",
+  ],
   css: ["~/assets/css/tailwind.css"],
   postcss: {
     plugins: {
