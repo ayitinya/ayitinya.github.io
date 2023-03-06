@@ -117,15 +117,13 @@ const submitForm = async (event: Event) => {
       </span>
       <ul class="hidden sm:flex flex-row justify-between gap-8">
         <li class="">
-          <NuxtLink to="#projects" class="">Work</NuxtLink>
+          <a href="#projects" class="">Work</a>
         </li>
         <li class="">
-          <NuxtLink to="#contact" class="">Contact</NuxtLink>
+          <a href="#contact" class="">Contact</a>
         </li>
         <li class="">
-          <NuxtLink :external="true" to="https://blog.ayitinya.me" class=""
-            >Blog</NuxtLink
-          >
+          <a href="https://blog.ayitinya.me" class="">Blog</a>
         </li>
       </ul>
       <a
@@ -148,15 +146,13 @@ const submitForm = async (event: Event) => {
     >
       <ul class="flex flex-col items-center gap-8">
         <li class="">
-          <NuxtLink to="#projects" class="">Work</NuxtLink>
+          <a hreflang="#projects" class="">Work</a>
         </li>
         <li class="">
-          <NuxtLink to="#contact" class="">Contact</NuxtLink>
+          <a href="#contact" class="">Contact</a>
         </li>
         <li class="">
-          <NuxtLink :external="true" to="https://blog.ayitinya.me" class=""
-            >Blog</NuxtLink
-          >
+          <a href="https://blog.ayitinya.me" class="">Blog</a>
         </li>
         <li>
           <a
@@ -194,78 +190,72 @@ const submitForm = async (event: Event) => {
           />
           <p class="text-lg">Have a project in mind? Let's work together.</p>
           <div class="flex flex-row gap-4 mt-8 justify-center md:justify-start">
-            <NuxtLink
-              to="#projects"
+            <a
+              href="#projects"
               class="p-3 bg-black border border-black text-white rounded-lg hover:bg-white hover:text-black transition-all duration-300"
             >
               My Projects
-            </NuxtLink>
-            <NuxtLink
-              to="#contact"
+            </a>
+            <a
+              href="#contact"
               class="p-3 border border-black rounded-lg hover:bg-black hover:border-white hover:text-white transition-all duration-300"
             >
               Contact Me
-            </NuxtLink>
+            </a>
           </div>
           <div class="flex items-center justify-center md:justify-start py-8">
-            <NuxtLink
-              :external="true"
-              to="https://github.com/ayitinya"
+            <a
+              href="https://github.com/ayitinya"
               target="_blank"
               rel="noopener noreferrer"
               class="pr-3 hover:scale-110 transition-all ease-in-out duration-500"
               title="github"
             >
               <Icon name="fa6-brands:github-alt" size="1.5rem" />
-            </NuxtLink>
-            <NuxtLink
-              :external="true"
-              to="https://www.linkedin.com/in/ayitinya/"
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ayitinya/"
               target="_blank"
               rel="noopener noreferrer"
               class="pr-3 hover:scale-110 transition-all ease-in-out duration-500"
               title="linkedin"
             >
               <Icon name="fa6-brands:linkedin" size="1.5rem" />
-            </NuxtLink>
-            <NuxtLink
-              :external="true"
-              to="https://www.twitter.com/ayitinya"
+            </a>
+            <a
+              href="https://www.twitter.com/ayitinya"
               target="_blank"
               rel="noopener noreferrer"
               class="pr-3 hover:scale-110 transition-all ease-in-out duration-500"
               title="twitter"
             >
               <Icon name="fa6-brands:twitter" size="1.5rem" />
-            </NuxtLink>
-            <NuxtLink
-              :external="true"
-              to="https://stackoverflow.com/users/13605694/ayitinya"
+            </a>
+            <a
+              href="https://stackoverflow.com/users/13605694/ayitinya"
               target="_blank"
               rel="noopener noreferrer"
               class="pr-3 hover:scale-110 transition-all ease-in-out duration-500"
               title="stackoverflow"
             >
               <Icon name="fa6-brands:stack-overflow" size="1.5rem" />
-            </NuxtLink>
-            <NuxtLink
-              :external="true"
-              to="https://www.youtube.com/channel/UCXl1hGdGXXKDidPqK1Xcm1A"
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCXl1hGdGXXKDidPqK1Xcm1A"
               target="_blank"
               rel="noopener noreferrer"
               class="pr-3 hover:scale-110 transition-all ease-in-out duration-500"
               title="youtube"
             >
               <Icon name="fa6-brands:youtube" size="1.5rem" />
-            </NuxtLink>
-            <NuxtLink
-              :external="true"
-              to="mailto:aytinya@outlook.com"
+            </a>
+            <a
+              href="mailto:aytinya@outlook.com"
               class="pr-3 hover:scale-110 transition-all ease-in-out duration-500"
               title="ayitinya@outlook.com"
             >
               <Icon name="fa6-solid:envelope" size="1.5rem" />
-            </NuxtLink>
+            </a>
           </div>
         </div>
         <div class="flex-shrink-0">
@@ -294,6 +284,18 @@ const submitForm = async (event: Event) => {
           <p>☕ Drank</p>
         </div>
       </div>
+    </section>
+
+    <section
+      class="my-40 portrait:my-16 grid grid-flow-col auto-cols-max gap-4 items-center"
+    >
+      <div class="w-full border border-gray-500">
+        <Icon name="simple-icons:javascript" size="3rem" />
+      </div>
+      <div><Icon name="simple-icons:typescript" size="3rem" /></div>
+      <div><Icon name="simple-icons:python" size="3rem" /></div>
+      <div><Icon name="simple-icons:vuedotjs" size="3rem" /></div>
+      <div><Icon name="simple-icons:react" size="3rem" /></div>
     </section>
 
     <section class="my-40 portrait:my-16 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -440,56 +442,51 @@ const submitForm = async (event: Event) => {
           </div>
 
           <div class="flex flex-row gap-4 my-4">
-            <NuxtLink
-              :external="true"
-              to="https://github.com/ayitinya"
+            <a
+              href="https://github.com/ayitinya"
               target="_blank"
               rel="noopener noreferrer"
               class="hover:scale-110 transition-all ease-in-out duration-500"
               title="github"
             >
               <Icon name="fa6-brands:github-alt" size="1.5rem" />
-            </NuxtLink>
-            <NuxtLink
-              :external="true"
-              to="https://www.linkedin.com/in/ayitinya/"
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ayitinya/"
               target="_blank"
               rel="noopener noreferrer"
               class="pr-3 hover:scale-110 transition-all ease-in-out duration-500"
               title="linkedin"
             >
               <Icon name="fa6-brands:linkedin" size="1.5rem" />
-            </NuxtLink>
-            <NuxtLink
-              :external="true"
-              to="https://www.twitter.com/ayitinya"
+            </a>
+            <a
+              href="https://www.twitter.com/ayitinya"
               target="_blank"
               rel="noopener noreferrer"
               class="hover:scale-110 transition-all ease-in-out duration-500"
               title="twitter"
             >
               <Icon name="fa6-brands:twitter" size="1.5rem" />
-            </NuxtLink>
-            <NuxtLink
-              :external="true"
-              to="https://stackoverflow.com/users/13605694/ayitinya"
+            </a>
+            <a
+              href="https://stackoverflow.com/users/13605694/ayitinya"
               target="_blank"
               rel="noopener noreferrer"
               class="hover:scale-110 transition-all ease-in-out duration-500"
               title="stackoverflow"
             >
               <Icon name="fa6-brands:stack-overflow" size="1.5rem" />
-            </NuxtLink>
-            <NuxtLink
-              :external="true"
-              to="https://www.youtube.com/channel/UCXl1hGdGXXKDidPqK1Xcm1A"
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCXl1hGdGXXKDidPqK1Xcm1A"
               target="_blank"
               rel="noopener noreferrer"
               class="hover:scale-110 transition-all ease-in-out duration-500"
               title="youtube"
             >
               <Icon name="fa6-brands:youtube" size="1.5rem" />
-            </NuxtLink>
+            </a>
           </div>
         </div>
 
@@ -560,13 +557,12 @@ const submitForm = async (event: Event) => {
       Made with
       <Icon name="fa6-solid:heart" size="1.5rem" />
       and open-sourced on
-      <NuxtLink
-        :external="true"
-        to="https://github.com/ayitinya/ayitinya.github.io"
+      <a
+        href="https://github.com/ayitinya/ayitinya.github.io"
         target="_blank"
         rel="noopener noreferrer"
         class="text-cyan-500"
-        >Github</NuxtLink
+        >Github</a
       >
       by Ayitinya
     </p>
