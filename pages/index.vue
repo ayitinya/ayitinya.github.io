@@ -286,100 +286,55 @@ const submitForm = async (event: Event) => {
       </div>
     </section>
 
-    <section
-      class="my-40 portrait:my-16 grid grid-flow-col auto-cols-max gap-4 items-center"
-    >
-      <div class="w-full border border-gray-500">
-        <Icon name="simple-icons:javascript" size="3rem" />
-      </div>
-      <div><Icon name="simple-icons:typescript" size="3rem" /></div>
-      <div><Icon name="simple-icons:python" size="3rem" /></div>
-      <div><Icon name="simple-icons:vuedotjs" size="3rem" /></div>
-      <div><Icon name="simple-icons:react" size="3rem" /></div>
-    </section>
-
-    <section class="my-40 portrait:my-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div>
-        <h2 class="text-3xl font-bold text-center underline my-2">Languages</h2>
-        <div class="flex flex-row flex-wrap gap-4 justify-center">
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:javascript" size="2rem" />
-            <span>JavaScript</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:typescript" size="2rem" />
-            <span>TypeScript</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:python" size="2rem" />
-            <span>Python</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:kotlin" size="2rem" />
-            <span>Kotlin</span>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:postgresql" size="2rem" />
-            <span>Postgres</span>
-          </div>
+    <section class="my-40 portrait:my-16">
+      <h2 class="text-2xl font-thin">Technologies</h2>
+      <h3 class="text-3xl font-bold">Frameworks, Tools and Languages</h3>
+      <div class="grid md:grid-cols-5 grid-cols-3 items-center">
+        <div class="p-4 flex flex-col items-center">
+          <Icon name="simple-icons:javascript" size="4.5rem" />
+          <span>Javascript</span>
         </div>
-      </div>
-
-      <div>
-        <h2 class="text-3xl font-bold text-center underline my-2">
-          Frameworks
-        </h2>
-        <div class="flex flex-row flex-wrap gap-4 justify-center">
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:vuedotjs" size="2rem" />
-            <span>VueJS</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:nuxtdotjs" size="2rem" />
-            <span>Nuxt</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:react" size="2rem" />
-            <span>React</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:flask" size="2rem" />
-            <span>Flask</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:django" size="2rem" />
-            <span>Django</span>
-          </div>
+        <div class="p-4 flex flex-col items-center">
+          <Icon name="simple-icons:typescript" size="4.5rem" />
+          <span>Typescript</span>
         </div>
-      </div>
-
-      <div>
-        <h2 class="text-3xl font-bold text-center underline my-2">Dev Tools</h2>
-        <div class="flex flex-row flex-wrap gap-4 justify-center">
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:git" size="2rem" />
-            <span>Git</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:visualstudiocode" size="2rem" />
-            <span>VS Code</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:amazonaws" size="2rem" />
-            <span>AWS</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <Icon name="simple-icons:firebase" size="2rem" />
-            <span>Firebase</span>
-          </div>
+        <div class="p-4 flex flex-col items-center">
+          <Icon name="simple-icons:python" size="4.5rem" />
+          <span>Python</span>
+        </div>
+        <div class="p-4 flex flex-col items-center">
+          <Icon name="simple-icons:kotlin" size="4.5rem" />
+          <span>Kotlin</span>
+        </div>
+        <div class="p-4 flex flex-col items-center">
+          <Icon name="simple-icons:vuedotjs" size="4.5rem" />
+          <span>Vue Js</span>
+        </div>
+        <div class="p-4 flex flex-col items-center">
+          <Icon name="simple-icons:react" size="4.5rem" />
+          <span>React Js</span>
+        </div>
+        <div class="p-4 flex flex-col items-center">
+          <Icon name="simple-icons:nuxtdotjs" size="4.5rem" />
+          <span>Nuxt Js</span>
+        </div>
+        <div class="p-4 flex flex-col items-center">
+          <Icon name="simple-icons:django" size="4.5rem" />
+          <span>Django</span>
+        </div>
+        <div class="p-4 flex flex-col items-center">
+          <Icon name="simple-icons:amazonaws" size="4.5rem" />
+          <span>AWS</span>
+        </div>
+        <div class="p-4 flex flex-col items-center">
+          <Icon name="simple-icons:firebase" size="4.5rem" />
+          <span>Firebase</span>
         </div>
       </div>
     </section>
 
     <section class="my-40 portrait:my-16" id="projects">
       <h2 class="text-2xl font-thin">Work</h2>
-
       <h3 class="text-3xl font-bold">Projects I Have Worked On</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
         <Project
