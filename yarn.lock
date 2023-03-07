@@ -3615,10 +3615,10 @@ mkdirp@^1.0.3:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
 
-mkdirp@^2.1.3:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-2.1.4.tgz#34faf1f2a1b4cc9a65a84e2979087211da608d11"
-  integrity sha512-Cy9cV4pRSl1o10i1dURTuRt4T04l0DkS1WZrT+Jir886OqOVkSv4FbOA7pgjhS8kEUrmm4kCRvv5var2iOCxpA==
+mkdirp@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-2.1.5.tgz#78d7eaf15e069ba7b6b47d76dd94cfadf7a4062f"
+  integrity sha512-jbjfql+shJtAPrFoKxHOXip4xS+kul9W3OzfzzrqueWK2QMGon2bFH2opl6W9EagBThjEz+iysyi/swOoVfB/w==
 
 mlly@^1.0.0, mlly@^1.1.0, mlly@^1.1.1:
   version "1.1.1"
@@ -3873,17 +3873,17 @@ nuxt-icon@^0.2.10:
     "@nuxt/kit" "^3.1.0"
     nuxt-config-schema "^0.4.4"
 
-nuxt-typed-router@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/nuxt-typed-router/-/nuxt-typed-router-3.0.3.tgz#b45fddeb95c42c2edd821aef490ec485e92c8d5a"
-  integrity sha512-MIbgUm3waQV6S2RUYpctKggQQc6yJ7lB+Uj+gSQqtdH+o9BKVnxEpSaaEQQ3e3AwP9AJN9GeniBchnVcL/WvBQ==
+nuxt-typed-router@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/nuxt-typed-router/-/nuxt-typed-router-3.0.4.tgz#1f36ce92aa54e6c36e0b8b6615de7c68210381c9"
+  integrity sha512-Po0IpzPhyzNO3lehHYArBiCdAQHZ0nJY90g2WabknOjnIFauWtX0rQAB9beb+h0Iily31tePRYbEgZWw/8WABA==
   dependencies:
     "@nuxt/kit" "^3.2.2"
     chalk "^5.2.0"
     defu "^6.1.2"
     lodash-es "^4.17.21"
     log-symbols "^5.1.0"
-    mkdirp "^2.1.3"
+    mkdirp "^2.1.5"
     nanoid "^4.0.1"
     pathe "1.1.0"
     prettier "2.8.4"
