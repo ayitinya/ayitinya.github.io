@@ -13,7 +13,7 @@
     "@nuxtjs/color-mode": "^3.1.8",
     "@types/node": "^18.15.2",
     "autoprefixer": "^10.4.14",
-    "nuxt": "3.2.3",
+    "nuxt": "3.3.2",
     "nuxt-icon": "^0.2.10",
     "nuxt-typed-router": "^3.0.6",
     "postcss": "^8.4.21",
