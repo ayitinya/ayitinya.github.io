@@ -14,7 +14,7 @@
     "@types/node": "^20.2.3",
     "autoprefixer": "^10.4.14",
     "nuxt": "3.5.1",
-    "nuxt-icon": "^0.2.10",
+    "nuxt-icon": "^0.4.1",
     "nuxt-typed-router": "^3.2.2",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
