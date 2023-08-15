@@ -17,7 +17,7 @@
     "nuxt-icon": "^0.5.0",
     "nuxt-typed-router": "^3.2.2",
     "postcss": "^8.4.27",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.3.3"
   },
   "dependencies": {
     "@vercel/analytics": "^1.0.2",
