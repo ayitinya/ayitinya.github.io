@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxt/image-edge",
     "nuxt-typed-router",
+    "nuxt-gtag"
   ],
   css: ["~/assets/css/tailwind.css"],
   postcss: {
@@ -17,6 +18,9 @@ export default defineNuxtConfig({
     cloudinary: {
       baseURL: "https://res.cloudinary.com/dnha19v3n/image/upload/",
     },
+  },
+  gtag: {
+    id: process.env.G_TAG_ID
   },
   runtimeConfig: {
     SPOTIFY_CLIENT_ID: process.env.SPOTIFY_CLIENT_ID ?? "",
