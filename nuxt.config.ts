@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxt/image-edge",
     "nuxt-typed-router",
-    "nuxt-gtag"
+    "nuxt-gtag",
+    "@nuxt/image"
   ],
   css: ["~/assets/css/tailwind.css"],
   postcss: {

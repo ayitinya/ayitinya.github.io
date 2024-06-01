@@ -8,12 +8,13 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/image": "^1.7.0",
     "@nuxt/image-edge": "^1.0.0-28059208.2abef1b",
     "@nuxt/postcss8": "^1.1.3",
     "@nuxtjs/color-mode": "^3.1.8",
     "@types/node": "^20.2.3",
     "autoprefixer": "^10.4.14",
-    "nuxt": "3.6.5",
+    "nuxt": "^3.11.2",
     "nuxt-gtag": "^2.0.5",
     "nuxt-icon": "^0.5.0",
     "nuxt-typed-router": "^3.2.2",
@@ -23,5 +24,6 @@
   "dependencies": {
     "@vercel/analytics": "^1.0.2",
     "vue-typewriter-effect": "^1.0.1"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }
