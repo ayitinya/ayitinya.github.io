@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/color-mode",
     "nuxt-icon",
-    "@nuxt/image-edge",
     "nuxt-typed-router",
     "nuxt-gtag",
     "@nuxt/image"
