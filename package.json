@@ -15,7 +15,7 @@
     "autoprefixer": "^10.4.14",
     "nuxt": "^3.11.2",
     "nuxt-gtag": "^2.0.5",
-    "nuxt-icon": "^0.5.0",
+    "nuxt-icon": "^0.6.10",
     "nuxt-typed-router": "^3.2.2",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3"
